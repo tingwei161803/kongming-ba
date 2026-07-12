@@ -1,0 +1,5 @@
+# 原始參考資料（不可 commit）
+tmp/
+
+# macOS
+.DS_Store
