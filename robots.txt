@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kongming-ba.peteraim.com/sitemap.xml
