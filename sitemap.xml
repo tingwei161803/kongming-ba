@@ -5,13 +5,13 @@
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://kongming-ba.peteraim.com/</loc>
+  </url>
+  <url>
     <loc>https://kongming-ba.peteraim.com/arcade.html</loc>
   </url>
   <url>
     <loc>https://kongming-ba.peteraim.com/effectuation.html</loc>
-  </url>
-  <url>
-    <loc>https://kongming-ba.peteraim.com/</loc>
   </url>
   <url>
     <loc>https://kongming-ba.peteraim.com/marketing.html</loc>
@@ -36,5 +36,38 @@
   </url>
   <url>
     <loc>https://kongming-ba.peteraim.com/world.html</loc>
+  </url>
+  <url>
+    <loc>https://kongming-ba.peteraim.com/zh-Hant/</loc>
+  </url>
+  <url>
+    <loc>https://kongming-ba.peteraim.com/zh-Hant/arcade.html</loc>
+  </url>
+  <url>
+    <loc>https://kongming-ba.peteraim.com/zh-Hant/effectuation.html</loc>
+  </url>
+  <url>
+    <loc>https://kongming-ba.peteraim.com/zh-Hant/marketing.html</loc>
+  </url>
+  <url>
+    <loc>https://kongming-ba.peteraim.com/zh-Hant/people.html</loc>
+  </url>
+  <url>
+    <loc>https://kongming-ba.peteraim.com/zh-Hant/primer.html</loc>
+  </url>
+  <url>
+    <loc>https://kongming-ba.peteraim.com/zh-Hant/stratagems.html</loc>
+  </url>
+  <url>
+    <loc>https://kongming-ba.peteraim.com/zh-Hant/strategy.html</loc>
+  </url>
+  <url>
+    <loc>https://kongming-ba.peteraim.com/zh-Hant/theories.html</loc>
+  </url>
+  <url>
+    <loc>https://kongming-ba.peteraim.com/zh-Hant/verification.html</loc>
+  </url>
+  <url>
+    <loc>https://kongming-ba.peteraim.com/zh-Hant/world.html</loc>
   </url>
 </urlset>
