@@ -107,6 +107,7 @@ button { font-family: inherit; }
   background: transparent; color: var(--ink-2);
   border: 1px solid var(--line); border-radius: 999px;
   padding: 6px 10px; cursor: pointer; font-size: .85rem; line-height: 1;
+  text-decoration: none;   /* the language switch is an <a>, the theme one a <button> */
   transition: border-color .15s, color .15s, background .15s;
 }
 .icon-btn:hover { border-color: var(--line-strong); color: var(--ink); background: var(--surface); }
