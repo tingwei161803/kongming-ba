@@ -10,7 +10,8 @@
 
 | | |
 |---|---|
-| 🌐 網站 | <https://kongming-ba.peteraim.com/> |
+| 🌐 English | <https://kongming-ba.peteraim.com/> |
+| 🌐 繁體中文 | <https://kongming-ba.peteraim.com/zh-Hant/> |
 
 > 直接點進去就能用，無需安裝。計謀與理論卡片支援 `#<slug>` 深連結（如 `stratagems.html#borrowed-arrows`）。
 
@@ -18,7 +19,7 @@
 
 ## ✨ 功能特色
 
-- 🌏 **雙語全頁切換** — English / 繁體中文一鍵切換，預設英文
+- 🌏 **一語言一網址** — 英文在 `/`、繁體中文在 `/zh-Hant/`，每一頁的兩種語言各有自己的網址，可以直接分享或收藏；右上角的切換鈕是連往同一頁另一語言的連結
 - 🌗 **深色 / 淺色模式** — 「墨與朱印」編輯風設計，兩種主題各自調校
 - 📖 **11 個主題頁** — 白話導讀、作品檔案、計謀對照、理論地圖、四份理論深論、查證報告
 - 🔍 **即時搜尋＋分類篩選** — 計謀依典故類型、理論依學門、查證依領域
@@ -35,8 +36,9 @@
 
 ```
 kongming-ba/
-├── index.html          # 首頁（hub）
-├── *.html              # 各主題頁（primer / world / stratagems / theories / …）
+├── index.html          # 英文首頁（hub）
+├── *.html              # 英文各主題頁（primer / world / stratagems / theories / …）
+├── zh-Hant/            # 繁體中文版的同一批頁面（同名檔案）
 ├── assets/             # styles.css（設計系統）、shell.js（共用外框）、app.js（版型引擎）
 ├── data/data.js        # 全站雙語內容（唯一資料檔）
 └── docs/               # 知識庫原始文件（Markdown，含查證報告與所有參考連結）
