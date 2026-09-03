@@ -1,0 +1,24 @@
+# 兩件事沒有機制擋就一定會漂：
+#   1. 改了 data/data.js 卻忘記重烤各頁的爬蟲快照（#6）
+#   2. 查證數字在 README / data.js / docs/08 之間各自為政（#7）
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: 查證數字是否一致
+        run: node tools/check-tallies.js
+      - name: 靜態快照是否跟 data.js 同步
+        run: node tools/prerender.js --check
