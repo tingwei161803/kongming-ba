@@ -120,12 +120,20 @@ const derived = {
   theories: page('theories').items.length
 };
 
-/* The fact-check page promises it lists EVERY correction. Hold it to that. */
+/* The fact-check page should carry at least every correction the report has.
+   A FLOOR, deliberately — equality would be a false invariant, and asserting
+   it once made this script report "all clear" while two corrections were in
+   fact missing. The site is not a mirror of the report: it restates some
+   Confirmed rows as "claim → correction" pairs, pulls one row from the
+   report's top-of-file summary list, and splits one report row into a
+   Confirmed row plus an Unverifiable one. Whether every correction is really
+   represented is a judgement call no count can make — this only catches the
+   blunt case of the site falling behind. */
 const siteCorrections = page('verification').rows
   .filter(r => r.verdict.en === 'Partly correct').length;
-if (siteCorrections !== totals.warn) {
-  problems.push(`查證頁自稱「列出全部修正」，但站上有 ${siteCorrections} 條、docs/08 有 ${totals.warn} 條` +
-    (fix ? '（--fix 不會替你補內容，要人工挑）' : ''));
+if (siteCorrections < totals.warn) {
+  problems.push(`查證頁只有 ${siteCorrections} 條修正，docs/08 有 ${totals.warn} 條——` +
+    '站上不該少於報告（兩邊不是一對一，所以只檢查下限，要人工挑，--fix 不會補內容）');
 }
 
 /* ---- 5. data.js hero stats + fact-check tiles -------------------------- */
