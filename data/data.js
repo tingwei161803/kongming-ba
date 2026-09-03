@@ -25,10 +25,10 @@ window.SITE_PAGES = [
       zh: "解讀漫畫《派對咖孔明》的查證型知識庫——三國軍師諸葛孔明轉生現代澀谷、替歌手操盤的故事。他的每一計都對應一個真實的商管理論；本站每個事實都經過一手來源交叉查證。"
     },
     stats: [
-      { value: 140, label: { en: "Claims fact-checked", zh: "逐條查證敘述" } },
-      { value: 114, label: { en: "Confirmed against sources", zh: "經來源確認屬實" } },
-      { value: 12,  label: { en: "Stratagems decoded", zh: "計謀完整解碼" } },
-      { value: 40,  label: { en: "Theories mapped", zh: "理論對照條目" } }
+      { value: 151, label: { en: "Claims fact-checked", zh: "逐條查證敘述" } },
+      { value: 117, label: { en: "Confirmed against sources", zh: "經來源確認屬實" } },
+      { value: 13,  label: { en: "Stratagems decoded", zh: "計謀完整解碼" } },
+      { value: 41,  label: { en: "Theories mapped", zh: "理論對照條目" } }
     ],
     quote: {
       text: {
@@ -241,6 +241,7 @@ window.SITE_PAGES = [
               [ { en: "Steve Kido", zh: "スティーブ・キド" }, { en: "Famed arranger (official name is katakana only — no kanji); eats menma on pudding; arranges DREAMER", zh: "知名編曲家（官方僅片假名，無漢字）；愛在布丁上插筍乾；為英子編〈DREAMER〉" }, { en: "Top-tier supplier / key creative partner", zh: "頂級供應商／關鍵技術夥伴" } ],
               [ { en: "Tsuyoshi Kondo", zh: "近藤剛" }, { en: "Big-shot music producer (NOT 近藤強) who offers the choice: a safe local festival vs the 100k-likes challenge", zh: "大物音樂製作人（不是「近藤強」），提出「保底地方音樂祭 vs 十萬讚挑戰」的選擇題" }, { en: "Channel gatekeeper", zh: "通路守門人" } ],
               [ { en: "Keiji Maezono", zh: "前園ケイジ" }, { en: "The arc villain (name is katakana, not 前園圭治); heir of 'Denpousha', a fictional ad giant with ¥5T revenue (an in-story exaggeration)", zh: "大反派（片假名，非「前園圭治」）；年營收 5 兆日圓的虛構廣告巨頭「電報社」御曹司（作品內誇飾設定）" }, { en: "Capital-and-channel hegemony incumbent", zh: "資本與通路霸權的既得利益者" } ],
+              [ { en: "Hajime Shoji", zh: "東海林 Hajime" }, { en: "Co-founder of Fourth Kingdom with Kongming; ex-SSS Music producer who quit over his 'borderless labels' creed; calls Kongming 'Old Master'", zh: "與孔明共同創設 Fourth Kingdom；前 SSS Music 製作人，為了「廠牌無界化」的理念離職；稱孔明「老師」" }, { en: "The insider co-founder — domain access the outsider strategist lacks", zh: "產業內行的共同創辦人——補上外來軍師欠缺的通路與人脈" } ],
               [ { en: "East South", zh: "East South" }, { en: "Rock duo bound as Maezono's ghostwriters by a ¥100M contract; later defect — Fourth Kingdom covers the penalty and signs them", zh: "被前園以 1 億日圓合約綁住的影武者搖滾雙人組；後倒戈，Fourth Kingdom 代付違約金簽下" }, { en: "A misallocated key resource", zh: "被錯誤配置的關鍵資源" } ]
             ]
           }
@@ -253,13 +254,13 @@ window.SITE_PAGES = [
           { type: "table",
             columns: [ { en: "Arc", zh: "故事弧" }, { en: "Where", zh: "位置" }, { en: "What happens", zh: "概要" } ],
             rows: [
-              [ { en: "Debut / Stone Sentinel Maze", zh: "出道戰／石兵八陣" }, { en: "Manga ch. 4 (vol. 1) · Anime ep. 2", zh: "漫畫第 4 話（1 卷）・動畫第 2 集" }, { en: "Breaking Mia's same-slot foil trap with a venue-wide 'maze'", zh: "用整間店的「迷宮」破解 ミア西表 的同時段陪襯陷阱" } ],
-              [ { en: "Yoyogi Art Fes / Something from Nothing", zh: "代々木藝術祭／無中生有" }, { en: "Manga ch. 7 (vol. 2) · Anime ep. 3", zh: "漫畫第 7 話（2 卷）・動畫第 3 集" }, { en: "Worst booth, strongest comeback against JET JACKET", zh: "最爛攤位逆轉 JET JACKET" } ],
+              [ { en: "Debut / Stone Sentinel Maze", zh: "出道戰／石兵八陣" }, { en: "Manga chs. 3–4 (vol. 1) · Anime ep. 2", zh: "漫畫第 3–4 話（1 卷）・動畫第 2 集" }, { en: "Breaking Mia's same-slot foil trap with a venue-wide 'maze'; ch. 3 explains the formation, ch. 4 builds it", zh: "用整間店的「迷宮」破解 ミア西表 的同時段陪襯陷阱；第 3 話講解陣法、第 4 話布陣" } ],
+              [ { en: "Yoyogi Art Fes / Something from Nothing", zh: "代々木藝術祭／無中生有" }, { en: "Manga ch. 7 (vol. 2) · Anime ep. 3", zh: "漫畫第 7 話（2 卷）・動畫第 3 集" }, { en: "Worst booth against JET JACKET's good one diagonally opposite; the equipment fault was staged, not real. A ~10,000-person event — the ticket to the Summer Sonia booking desk", zh: "最爛攤位對上斜對面視野好的 JET JACKET；器材故障是裝的、不是真壞。動員約 1 萬人的活動——換到 Summer Sonia 接洽窗口的門票" } ],
               [ { en: "Recruiting KABE", zh: "收編 KABE" }, { en: "≈ Manga ch. 11–13 · Anime eps. 5–6", zh: "約漫畫第 11–13 話・動畫第 5–6 集" }, { en: "Kongming loses the rap battle on purpose — a scheme within a scheme; KABE rejoins music", zh: "rap battle 孔明故意輸（計中計），KABE 重燃熱情加入" } ],
-              [ { en: "100k likes / Borrowed Arrows", zh: "十萬讚決戰／草船借箭" }, { en: "Manga ch. 24–25 (vol. 4) · Anime eps. 11–12", zh: "漫畫第 24–25 話（4 卷）・動畫第 11–12 集" }, { en: "Borrowing AZALEA's paid crowd; DREAMER wins for real; the likes are later 'returned'", zh: "借 AZALEA 的百萬抽獎流量；〈DREAMER〉真正達標；讚數事後「歸還」" } ],
+              [ { en: "100k likes / Borrowed Arrows", zh: "十萬讚決戰／草船借箭" }, { en: "Manga chs. 24–26 (vol. 4) · Anime eps. 11–12", zh: "漫畫第 24–26 話（4 卷）・動畫第 11–12 集" }, { en: "The prize is the Summer Sonia performance slot. Borrowing AZALEA's paid crowd; once the trick is blown at ~70k, Kongming pivots to Sowing Discord; DREAMER wins for real; the likes are later 'returned'", zh: "賭注是 Summer Sonia 的出演權。先借 AZALEA 的百萬抽獎流量；約 7 萬讚被識破後改打離間計；〈DREAMER〉真正達標；讚數事後「歸還」" } ],
               [ { en: "Kyoto / the mother's wager", zh: "京都篇／母女賭約" }, { en: "From ≈ manga ch. 38", zh: "約漫畫第 38 話起" }, { en: "The Five-Merchant Festival; 'Flower Crown' finally moves Eiko's mother", zh: "五商祭演藝合戰；〈Flower Crown〉打動母親翔子" } ],
-              [ { en: "Founding Fourth Kingdom", zh: "Fourth Kingdom 創業" }, { en: "Manga ch. 64–65 (vol. 9)", zh: "漫畫第 64–65 話（9 卷）" }, { en: "Kongming founds the indie label (Eiko is a signed artist, NOT the owner) and brokers a three-major-label crossover", zh: "孔明創設獨立廠牌（英子是旗下藝人、非老闆），促成三大唱片公司聯名" } ],
-              [ { en: "Summer Sonia showdown", zh: "Summer Sonia 決戰" }, { en: "Mid-series", zh: "漫畫中期" }, { en: "Against Maezono: KABE exposes the ghostwriting on stage by rap (Kongming planned it, KABE executed); attendance 311 → 43,000 — quoted verbatim on Japanese Wikipedia", zh: "對抗前園：KABE 在舞台上用 rap 揭發影武者（孔明策劃、KABE 執行）；觀眾動員 311 → 43,000 人（日文維基逐字記載）" } ],
+              [ { en: "Founding Fourth Kingdom", zh: "Fourth Kingdom 創業" }, { en: "Manga chs. 64–65 (vol. 9); arc ≈ chs. 61–69", zh: "漫畫第 64–65 話（9 卷）；本篇約第 61–69 話" }, { en: "A fourth label set up against the big three, co-founded with ex-SSS Music producer Hajime Shoji under a 'borderless labels' creed (Eiko is a signed artist, NOT the owner); its first job is the three-major crossover unit", zh: "在三大廠牌之外另立第四家，與前 SSS Music 製作人東海林 Hajime 以「廠牌無界化」理念共同創設（英子是旗下藝人、非老闆）；第一件工作就是跨三大廠牌的聯名團體" } ],
+              [ { en: "Summer Sonia showdown", zh: "Summer Sonia 決戰" }, { en: "≈ Manga ch. 77– (mid-series)", zh: "約漫畫第 77 話起（中期）" }, { en: "A 300,000-scale festival, 1–2 Aug 2020. Eiko is put on the Green Pool Stage, far from the main stage, in Maezono's slot; his defection of KABE is Kongming's own plant (Red Cliffs). KABE exposes the ghostwriting on stage by rap; attendance 311 → 43,000 — quoted verbatim on Japanese Wikipedia", zh: "動員 30 萬人規模、2020-08-01～02 舉行。英子被排在離主舞台很遠的 Green Pool Stage、時段撞前園；前園挖走 KABE 其實是孔明種下的棋（赤壁詐降）。KABE 在舞台上用 rap 揭發影武者；觀眾動員 311 → 43,000 人（日文維基逐字記載）" } ],
               [ { en: "Horse-racing arc", zh: "賽馬篇" }, { en: "Vol. 16", zh: "第 16 卷" }, { en: "Kongming HIMSELF bets his whole ¥1M savings (not Kobayashi) and loses the first bet; later trains a never-won horse to a G1 win to secure a concert venue", zh: "孔明本人押上全財產 100 萬日圓（不是小林）且首賭輸掉；後調教萬年未勝馬贏 G1，換到個唱場地檔期" } ],
               [ { en: "First solo concert", zh: "首場個人演唱會" }, { en: "Vols. 15–17", zh: "第 15–17 卷" }, { en: "The stepping stone toward VOICELL LAND", zh: "前進 VOICELL LAND 的踏板" } ],
               [ { en: "Kindergarten arc", zh: "幼稚園篇" }, { en: "Manga ch. 143–144", zh: "漫畫第 143–144 話" }, { en: "Saving Saijo Hanamaru Kindergarten from land sharks", zh: "解救西城はなまる幼稚園、對抗土地掮客" } ],
@@ -296,15 +297,15 @@ window.SITE_PAGES = [
       {
         slug: "stone-maze",
         category: "romance",
-        meta: { en: "Manga ch. 4 · Anime ep. 2", zh: "漫畫第 4 話・動畫第 2 集" },
+        meta: { en: "Manga chs. 3–4 · Anime ep. 2", zh: "漫畫第 3–4 話・動畫第 2 集" },
         title: { en: "Stone Sentinel Maze", zh: "石兵八陣" },
         summary: {
           en: "Lights, fog and walkways turn the venue into a maze that funnels a rival's audience straight to Eiko's stage.",
           zh: "用燈光、煙霧與動線把整間店變成迷宮，把對手的觀眾整批導進英子的場子。"
         },
         overview: {
-          en: "At the L.R.N. night, star singer Mia books Eiko in the same time slot as a foil. Kongming re-choreographs the whole club — synchronized staff in identical outfits, fog machines, looping corridors, a 360-degree stage — so that Mia's crowd gets lost and ends up in front of Eiko, where the singing does the rest.",
-          zh: "L.R.N. 之夜，人氣歌手 ミア西表 把英子排在同時段當陪襯。孔明重新編排整間店——同服裝工作人員定時移動、煙霧、繞圈動線、360 度舞台——讓 Mia 的觀眾迷路走到英子面前，剩下的交給歌聲。"
+          en: "At the L.R.N. night, star singer Mia books Eiko in the same time slot as a foil. Kongming re-choreographs the whole club — synchronized staff in identical outfits, fog machines, looping corridors, a 360-degree stage — so that Mia's crowd gets lost and ends up in front of Eiko, where the singing does the rest. The beat runs across two chapters: ch. 3 is where he explains the formation (Lu Xun trapped in the Eight Trigrams maze), ch. 4 is where he builds it.",
+          zh: "L.R.N. 之夜，人氣歌手 ミア西表 把英子排在同時段當陪襯。孔明重新編排整間店——同服裝工作人員定時移動、煙霧、繞圈動線、360 度舞台——讓 Mia 的觀眾迷路走到英子面前，剩下的交給歌聲。這一計橫跨兩話：第 3 話是講解陣法的一話（陸遜困於八陣圖），第 4 話才是真正布陣的一話。"
         },
         tags: ["Gruen effect", "Guerrilla marketing", "AIDA"],
         details: [
@@ -322,10 +323,10 @@ window.SITE_PAGES = [
           zh: "假的器材故障消息讓對手鬆懈，趁對方自我保留的空檔讓英子搶下全場。"
         },
         overview: {
-          en: "At the Yoyogi Art Fes, Eiko draws the worst booth opposite the popular band JET JACKET. Kongming leaks a fake breakdown, and exploits two real constraints — the rival singer's strained throat and his one-man show the next day — to time Eiko's set exactly when the enemy cannot answer at full power.",
-          zh: "代々木藝術祭，英子分到最爛攤位，對面是人氣樂團 JET JACKET。孔明放出假故障消息，並利用兩個真實限制——對方主唱喉傷、隔天還有專場——把英子的開唱時機掐在敵人無法全力回擊的空檔。"
+          en: "At the Yoyogi Art Fes, Eiko draws the worst booth opposite the popular band JET JACKET. Kongming leaks a fake breakdown, and exploits two real constraints — the rival singer's strained throat and his one-man show the next day — to time Eiko's set exactly when the enemy cannot answer at full power. Two details worth keeping straight: the good, clear-sightline booth diagonally opposite was JET JACKET's, and Eiko's equipment never actually broke — the fault was staged. Afterwards the rivals come to protest; Kongming hands their singer a herbal decoction that cures the throat, and they leave promising a rematch. The first of many enemies he converts into allies.",
+          zh: "代々木藝術祭，英子分到最爛攤位，對面是人氣樂團 JET JACKET。孔明放出假故障消息，並利用兩個真實限制——對方主唱喉傷、隔天還有專場——把英子的開唱時機掐在敵人無法全力回擊的空檔。兩個細節要記清楚：視野好的攤位在斜對面、是 JET JACKET 的；而英子的器材從頭到尾沒壞——故障是裝出來的。事後對手上門抗議，孔明反手給主唱一帖煎藥治好喉傷，對方留下一句「下次再對決」就走了：這是他把敵人變成盟友的第一次。"
         },
-        tags: ["Information asymmetry", "Lemonade principle", "Blue ocean"],
+        tags: ["Information asymmetry", "Lemonade principle", "Blue ocean", "Repeated games"],
         details: [
           { label: { en: "Provenance", zh: "典故考證" }, value: { en: "Stratagem no. 7 of the Thirty-Six Stratagems — a Ming–Qing era compilation by unknown authors. It was never written by Zhuge Liang or Sun Tzu; giving it to Kongming is artistic license.", zh: "《三十六計》第 7 計（敵戰計）。《三十六計》成書於明末清初、作者不詳，並非諸葛亮或孫武所作——放在孔明身上屬藝術加工。" } },
           { label: { en: "Business theory", zh: "對應理論" }, value: { en: "An information-asymmetry game: manipulate the signal the opponent optimizes against. Also a textbook lemonade move — the worst booth becomes the ambush site.", zh: "資訊不對稱賽局：操縱對手據以決策的訊號。同時是教科書級檸檬水原則——最爛攤位變成奇襲陣地。" } }
@@ -341,8 +342,8 @@ window.SITE_PAGES = [
           zh: "假扮對手樂團先開唱、放出假 QR code，把對手花大錢聚來的人潮與讚數整碗端走。"
         },
         overview: {
-          en: "AZALEA runs a 'scan, like, win ¥1M' truck campaign for the 100k-likes race. Kongming stages Eiko and KABE at the same Shibuya spot performing AS AZALEA, with their own QR code out front — the paid crowd's likes flow to Eiko, briefly reaching about 70k before the real group arrives. The final push past 100k comes not from the trick but from Eiko's own song, DREAMER.",
-          zh: "AZALEA 為十萬讚之戰砸錢辦「掃碼按讚抽百萬」快閃。孔明讓英子與 KABE 在同一地點假扮 AZALEA 開唱、放出自己的 QR code——對手買來的人潮讚數流向英子，一度衝到約 7 萬，直到本尊到場。最後突破十萬靠的不是計謀，是英子的原創曲〈DREAMER〉。"
+          en: "What the 100k-likes race buys is the performance slot at Summer Sonia, a festival on a 300,000-person scale. AZALEA runs a 'scan, like, win ¥1M' truck campaign for it. Kongming stages Eiko and KABE at the same Shibuya spot performing AS AZALEA, with their own QR code out front — the paid crowd's likes flow to Eiko, briefly reaching about 70k before the real group arrives. The final push past 100k comes not from the trick but from Eiko's own song, DREAMER.",
+          zh: "十萬讚之戰的獎品，是動員 30 萬人規模的音樂祭 Summer Sonia 出演權。AZALEA 為此砸錢辦「掃碼按讚抽百萬」快閃。孔明讓英子與 KABE 在同一地點假扮 AZALEA 開唱、放出自己的 QR code——對手買來的人潮讚數流向英子，一度衝到約 7 萬，直到本尊到場。最後突破十萬靠的不是計謀，是英子的原創曲〈DREAMER〉。"
         },
         tags: ["Judo strategy", "Viral marketing", "Traffic hijacking", "CAC"],
         details: [
@@ -360,8 +361,8 @@ window.SITE_PAGES = [
           zh: "一句大實話——「擴散會降低你中一百萬的機率」——分化對手的粉絲大軍。"
         },
         overview: {
-          en: "KABE's diss raps shake AZALEA's crowd, then Kongming weaponizes plain arithmetic: if you share the campaign, your own chance of winning drops. Individual rationality dissolves the collective push — a live-action prisoner's dilemma.",
-          zh: "KABE 的 diss 動搖 AZALEA 陣營，孔明再用簡單算術收割：你越幫忙擴散，自己中獎機率越低。個人理性瓦解集體行動——活生生的囚徒困境。"
+          en: "The disguise only holds until AZALEA turn up in person. The moment it is blown, at roughly 70k likes, Kongming switches weapons. KABE's diss raps shake AZALEA's crowd, then Kongming weaponizes plain arithmetic: if you share the campaign, your own chance of winning drops. Individual rationality dissolves the collective push — a live-action prisoner's dilemma.",
+          zh: "假扮只撐到 AZALEA 本尊到場。計謀在約 7 萬讚處被識破的當下，孔明立刻換武器。KABE 的 diss 動搖 AZALEA 陣營，孔明再用簡單算術收割：你越幫忙擴散，自己中獎機率越低。個人理性瓦解集體行動——活生生的囚徒困境。"
         },
         tags: ["Game theory", "Prisoner's dilemma", "Social proof"],
         details: [
@@ -420,20 +421,21 @@ window.SITE_PAGES = [
       {
         slug: "warfare-is-deception",
         category: "tactics",
-        meta: { en: "Manga ch. 64 (vol. 9)", zh: "漫畫第 64 話（9 卷）" },
+        meta: { en: "Manga ch. 64 (vol. 9) · Fourth Kingdom arc ≈ chs. 61–69", zh: "漫畫第 64 話（9 卷）・Fourth Kingdom 篇約第 61–69 話" },
         title: { en: "All Warfare Is Based on Deception", zh: "兵は詭道なり" },
         summary: {
           en: "The one line actually from Sun Tzu — invoked as the indie label Fourth Kingdom brokers an unprecedented three-major-label crossover.",
           zh: "真正出自《孫子兵法》的一句——用在 Fourth Kingdom 促成三大唱片公司破天荒聯名的一役。"
         },
         overview: {
-          en: "Kongming founds the independent label Fourth Kingdom (Eiko is a signed artist, not the owner) and, playing the three giants KEY TIME, V-EX and SSS Music against their own boundaries, brokers a crossover no one thought possible — rewriting the industry's value chain from the edge.",
-          zh: "孔明創設獨立廠牌 Fourth Kingdom（英子是旗下藝人、非老闆），操作 KEY TIME、V-EX、SSS Music 三大廠牌的邊界心結，促成沒人認為可能的聯名演出——從產業邊緣改寫價值鏈。"
+          en: "After Eiko turns down the majors, Kongming founds the independent label Fourth Kingdom with Hajime Shoji — an ex-SSS Music producer whose stated creed is 'borderless labels' (Eiko is a signed artist, not the owner). Its first job is a crossover unit spanning KEY TIME, V-EX and SSS Music, three houses that do not lend each other artists. Reader field notes record the mechanism: he negotiates with each label separately, and tells each one that the other two are already in. None of it is true when he says it; all of it is true by the time he is finished.",
+          zh: "英子回絕大廠邀約後，孔明與前 SSS Music 製作人東海林 Hajime 共同創設獨立廠牌 Fourth Kingdom——東海林的理念是「廠牌無界化」（英子是旗下藝人、不是老闆）。第一件工作就是橫跨 KEY TIME、V-EX、SSS Music 的聯名團體，而這三家從不互借藝人。讀者筆記記下了手法：他分頭去談，對每一家都說另外兩家已經答應了。說的當下沒有一句是真的；談完之後每一句都成真。"
         },
-        tags: ["Disruptive innovation", "Ecosystem play"],
+        tags: ["Disruptive innovation", "Ecosystem play", "Bootstrapping problem"],
         details: [
           { label: { en: "Provenance", zh: "典故考證" }, value: { en: "Sun Tzu, The Art of War, ch. 1 ('Laying Plans') — genuinely Sun Wu's text, unlike the Thirty-Six Stratagems.", zh: "《孫子兵法・始計篇》「兵者，詭道也」——與《三十六計》不同，這句是真正的孫武原文。" } },
-          { label: { en: "Business theory", zh: "對應理論" }, value: { en: "Disruptive innovation: enter from the edge the giants ignore, then redefine the rules.", zh: "破壞式創新：從巨頭看不上的邊緣切入，最後重新定義規則。" } }
+          { label: { en: "Business theory", zh: "對應理論" }, value: { en: "Disruptive innovation: enter from the edge the giants ignore, then redefine the rules. The bluff underneath is a textbook bootstrapping problem — everyone will join once the others have, and nobody will go first — solved by manufacturing the belief that the others already did.", zh: "破壞式創新：從巨頭看不上的邊緣切入，最後重新定義規則。而底下那個唬人的動作是教科書級的啟動問題——每一家都願意在別家加入之後加入，但沒人肯當第一個——解法是製造出「別家已經進來了」的信念。" } },
+          { label: { en: "Verification note", zh: "查證註記" }, value: { en: "The three-way bluff comes from reader field notes; no public source states it. The founding facts (Shoji, the borderless-labels creed, the cross-major unit) are on Japanese Wikipedia, and the chapter is literally titled 'All warfare is deception'.", zh: "三方互唬的手法出自讀者筆記，查無公開來源明述。創業事實（東海林、廠牌無界化理念、跨三大廠牌團體）見日文維基；而這一話的標題本身就叫「兵は詭道なり」。" } }
         ]
       },
       {
@@ -472,17 +474,36 @@ window.SITE_PAGES = [
         ]
       },
       {
+        slug: "fire-attack",
+        category: "romance",
+        meta: { en: "≈ Manga ch. 77– · Summer Sonia arc", zh: "約漫畫第 77 話起・Summer Sonia 篇" },
+        title: { en: "Fire at Red Cliffs (Huang Gai's False Defection)", zh: "赤壁火攻（黃蓋詐降）" },
+        summary: {
+          en: "Kongming lets his strongest asset be poached by the enemy. The defection IS the plan.",
+          zh: "孔明讓自家最強戰力被敵人挖走——那場叛逃本身就是計。"
+        },
+        overview: {
+          en: "At Summer Sonia, Eiko draws the Green Pool Stage — far from the main stage, in the same slot as superstar Keiji Maezono, whose family ad agency sponsors the festival and who leans on the organisers to drop her outright. Then a doctored photo splits KABE from Kongming, and Maezono poaches him. Japanese Wikipedia states plainly that this was Kongming's own scheme: KABE crosses over carrying the plan, and from Maezono's own stage raps the verse that exposes the ghostwriting, while East South defect in real time. Red Cliffs in three moves — the staged falling-out, the false surrender, and the fire lit from inside the enemy's fleet.",
+          zh: "Summer Sonia 上，英子被排在離主舞台很遠的 Green Pool Stage，時段還撞上超級藝人前園 Keiji——他家的廣告巨頭是音樂祭贊助商，他甚至施壓主辦方直接取消英子的演出。接著一張變造照片讓 KABE 與孔明鬧翻，前園順勢把人挖走。日文維基寫得很直白：這本來就是孔明的計。KABE 帶著劇本過去，站在前園自己的舞台上用 rap 唱出影武者的真相，East South 當場倒戈。赤壁三部曲——先演翻臉，再詐降，最後從敵方船隊內部點火。"
+        },
+        tags: ["Adverse selection", "Costly signaling", "Trojan horse", "Affordable loss"],
+        details: [
+          { label: { en: "Provenance", zh: "典故考證" }, value: { en: "History and fiction split cleanly here. Historical: the Records (Biography of Zhou Yu) credit Huang Gai with proposing the fire attack at Red Cliffs (208) AND with writing to Cao Cao to feign surrender. Fiction: the beating that sells the defection — the 苦肉計, stratagem no. 34 of the Thirty-Six — is Luo Guanzhong's invention in Romance chs. 46–49.", zh: "史實與虛構在這裡分得很乾淨。正史：《三國志・周瑜傳》記載赤壁（208 年）火攻之策出自黃蓋，「先書報曹公，欺以欲降」的詐降也是黃蓋本人。虛構：讓詐降顯得可信的那頓打——「苦肉計」，《三十六計》第 34 計——是羅貫中在《演義》第 46–49 回的加工。" } },
+          { label: { en: "Business theory", zh: "對應理論" }, value: { en: "Adverse selection in the talent market: the star who suddenly comes loose cheaply is precisely the one to check hardest, and Maezono never asks why. He reads the defection as evidence of his own pull. Costly signaling is what makes it work — Kongming has to spend his most visible asset, because a cheap signal would not have been believed.", zh: "人才市場的逆向選擇：突然低價鬆動的明星，正是最該查清楚的那一個，而前園完全沒問「為什麼」。他把叛逃讀成自己拉力的證明。讓這計成立的是代價高昂的訊號——孔明必須押上最顯眼的資產，因為便宜的訊號對方不會信。" } }
+        ]
+      },
+      {
         slug: "ghostwriter-expose",
         category: "scene",
-        meta: { en: "Summer Sonia arc", zh: "Summer Sonia 篇" },
+        meta: { en: "≈ Manga ch. 77– · Summer Sonia arc", zh: "約漫畫第 77 話起・Summer Sonia 篇" },
         title: { en: "Exposing the Ghostwriter", zh: "揭發影武者" },
         summary: {
           en: "KABE's on-stage rap (planned by Kongming) reveals the villain's manufactured persona; attendance rockets from 311 to 43,000.",
           zh: "KABE 在舞台上用 rap（孔明策劃）拆穿反派的人設工程；觀眾動員從 311 人衝到 43,000 人。"
         },
         overview: {
-          en: "Maezono's stardom is built on ghostwriters — the duo East South, bound by a ¥100M contract. Kongming plants KABE in the enemy camp; on the Summer Sonia stage KABE raps the truth while East South defect in real time. Note the correction: Kongming plans, KABE executes — analyses that say 'Kongming exposed it himself' are wrong. Japanese Wikipedia records the 311 → 43,000 legend verbatim.",
-          zh: "前園的人氣建立在影武者上——被 1 億日圓合約綁住的雙人組 East South。孔明把 KABE 安插進敵營，Summer Sonia 舞台上 KABE 用 rap 唱出真相、East South 當場倒戈。注意修正：孔明策劃、KABE 執行——「孔明親自揭發」的說法是錯的。日文維基逐字記載 311 → 43,000 的傳說。"
+          en: "Maezono's stardom is built on ghostwriters — the duo East South, bound by a ¥100M contract. Kongming plants KABE in the enemy camp (the method is its own card — see Fire at Red Cliffs); on the Green Pool Stage KABE raps the truth while East South defect in real time. Note the correction: Kongming plans, KABE executes — analyses that say 'Kongming exposed it himself' are wrong. Japanese Wikipedia records the 311 → 43,000 legend verbatim.",
+          zh: "前園的人氣建立在影武者上——被 1 億日圓合約綁住的雙人組 East South。孔明把 KABE 安插進敵營（手法本身另有一張卡，見「赤壁火攻」）；Green Pool Stage 上 KABE 用 rap 唱出真相、East South 當場倒戈。注意修正：孔明策劃、KABE 執行——「孔明親自揭發」的說法是錯的。日文維基逐字記載 311 → 43,000 的傳說。"
         },
         tags: ["Cognitive dissonance", "Pilot-in-the-plane"],
         details: [
@@ -715,6 +736,14 @@ window.SITE_PAGES = [
         tags: ["Nash", "Akerlof"],
         details: [
           { label: { en: "Source", zh: "原典" }, value: { en: "von Neumann & Morgenstern (1944); Nash (1950); Akerlof's 'Market for Lemons', QJE 84(3), 1970", zh: "von Neumann & Morgenstern（1944）；Nash（1950）；Akerlof 檸檬市場，QJE 84(3), 1970" } } ] },
+      { slug: "adverse-selection", category: "strat",
+        title: { en: "Adverse Selection (The Market for Lemons)", zh: "逆向選擇（檸檬市場）" },
+        summary: { en: "When you cannot inspect quality, the bargain that walks up to you is the one to trust least.", zh: "當你無法驗證品質時，自己走上門來的便宜貨，正是最不該相信的那一個。" },
+        overview: { en: "Maezono poaches KABE and reads the defection as proof of his own pull, never asking why the asset came loose — and it was a plant. The knowledge base cannot resist the pun: Akerlof's lemon market and Sarasvathy's lemonade principle draw opposite lessons from the same fruit. One warns you about what you cannot inspect; the other tells you to cook with whatever you are handed.", zh: "前園挖走 KABE，並把這場叛逃讀成自己拉力的證明，從沒問過「這個人為什麼會鬆動」——而那是一顆棋。順帶一提本庫忍不住的雙關：Akerlof 的檸檬市場與 Sarasvathy 的檸檬水原則，從同一種水果得出相反的教訓。一個警告你不要碰無法查驗的東西；另一個要你拿到什麼就煮什麼。" },
+        tags: ["Akerlof 1970"],
+        details: [
+          { label: { en: "Source", zh: "原典" }, value: { en: "George A. Akerlof, 'The Market for Lemons: Quality Uncertainty and the Market Mechanism', Quarterly Journal of Economics 84(3), 1970, pp. 488–500; Nobel 2001, shared with Spence and Stiglitz.", zh: "George A. Akerlof，〈The Market for Lemons: Quality Uncertainty and the Market Mechanism〉，Quarterly Journal of Economics 84(3), 1970, pp. 488–500；2001 年諾貝爾經濟學獎，與 Spence、Stiglitz 共同獲獎。" } },
+          { label: { en: "In the manga", zh: "漫畫對照" }, value: { en: "Maezono acquires KABE without due diligence and buys the weapon that destroys him (Fire at Red Cliffs).", zh: "前園沒做任何盡職查核就收下 KABE，買進了毀掉自己的武器（見「赤壁火攻」）。" } } ] },
       { slug: "swot", category: "strat",
         title: { en: "SWOT (origins contested)", zh: "SWOT（起源有爭議）" },
         summary: { en: "Strengths, weaknesses, opportunities, threats — whose invention nobody can prove.", zh: "優勢、劣勢、機會、威脅——但發明者是誰沒人能證明。" },
@@ -1342,18 +1371,20 @@ window.SITE_PAGES = [
     icon: "fact_check",
     title: { en: "Fact-Check Report", zh: "查證報告" },
     subtitle: {
-      en: "140 claims from the source analyses were independently cross-checked against primary sources — 10 parallel research agents, 229 lookups. This page lists every correction and the most load-bearing confirmations.",
-      zh: "原始分析中的 140 條敘述經 10 個平行查證代理、229 次檢索，逐條比對一手來源。本頁列出全部修正與最關鍵的確認。"
+      en: "140 claims from the source analyses were independently cross-checked against primary sources — 10 parallel research agents, 229 lookups — and a later pass added 11 more raised by a reader's own chapter-by-chapter notes. This page lists every correction and the most load-bearing confirmations.",
+      zh: "原始分析中的 140 條敘述經 10 個平行查證代理、229 次檢索，逐條比對一手來源；後續又補查了 11 條來自讀者逐話筆記的敘述。本頁列出全部修正與最關鍵的確認。"
     },
     lead: [
       { en: "Verdicts: Confirmed = directly supported by a reliable source · Partly correct = right in outline, wrong in a detail (the note gives the correct version) · Unverifiable = no adequate source found. Zero claims were outright false. Full tables with links live in the repository's docs.",
-        zh: "判定標準：確認＝可靠來源直接支持・部分正確＝大方向對但細節有誤（備註欄給出正確版本）・無法查證＝找不到足夠來源。沒有任何一條完全錯誤。含連結的完整表格在 GitHub 倉庫的 docs 目錄。" }
+        zh: "判定標準：確認＝可靠來源直接支持・部分正確＝大方向對但細節有誤（備註欄給出正確版本）・無法查證＝找不到足夠來源。沒有任何一條完全錯誤。含連結的完整表格在 GitHub 倉庫的 docs 目錄。" },
+      { en: "The reader-notes batch is tagged 'Story · reader notes'. Where a chapter range exists only in those notes and no public index confirms it, the verdict says so rather than quietly adopting the number.",
+        zh: "讀者筆記那一批標為「劇情・讀者筆記」領域。凡是話數範圍只出現在筆記裡、查無公開索引可佐證的，一律照實判定，不會默默把數字收進正文。" }
     ],
     tiles: [
-      { value: 140, label: { en: "Claims checked", zh: "查證敘述" }, tone: "plain" },
-      { value: 114, label: { en: "Confirmed", zh: "確認" }, tone: "ok" },
-      { value: 22,  label: { en: "Partly correct", zh: "部分正確" }, tone: "warn" },
-      { value: 4,   label: { en: "Unverifiable", zh: "無法查證" }, tone: "bad" }
+      { value: 151, label: { en: "Claims checked", zh: "查證敘述" }, tone: "plain" },
+      { value: 117, label: { en: "Confirmed", zh: "確認" }, tone: "ok" },
+      { value: 28,  label: { en: "Partly correct", zh: "部分正確" }, tone: "warn" },
+      { value: 6,   label: { en: "Unverifiable", zh: "無法查證" }, tone: "bad" }
     ],
     columns: [
       { key: "domain",  label: { en: "Domain", zh: "領域" }, filter: true },
@@ -1362,6 +1393,17 @@ window.SITE_PAGES = [
       { key: "note",    label: { en: "Correction / note", zh: "修正／備註" } }
     ],
     rows: [
+      { domain: { en: "Story · reader notes", zh: "劇情・讀者筆記" }, claim: { en: "Stone Sentinel Maze is chapter 4", zh: "石兵八陣是第 4 話" }, verdict: { en: "Confirmed", zh: "確認" }, note: { en: "The beat spans chs. 3–4: ja.wikipedia puts Lu Xun in the ch. 3 explanation of the formation and the stratagem itself at ch. 4", zh: "這一計橫跨第 3–4 話：日文維基把陸遜列在第 3 話的陣法講解，計謀本身列在第 4 話" } },
+      { domain: { en: "Story · reader notes", zh: "劇情・讀者筆記" }, claim: { en: "At Yoyogi, Eiko's sound gear was broken/sabotaged", zh: "代々木一戰英子的音響被弄壞" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "The fault was STAGED: ja.wikipedia says JET JACKET lost the crowd to Eiko's booth, which had been 'feigning equipment trouble'. JET JACKET held the good, clear-sightline booth diagonally opposite", zh: "故障是「裝」的：日文維基寫 JET JACKET 是被「機材トラブルを装っていた」的英子攤位搶走觀眾。斜對面那個視野好的攤位是 JET JACKET 的" } },
+      { domain: { en: "Story · reader notes", zh: "劇情・讀者筆記" }, claim: { en: "The 100k-likes race is a popularity contest in itself", zh: "十萬讚企劃只是單純比人氣" }, verdict: { en: "Confirmed", zh: "確認" }, note: { en: "The prize is the Summer Sonia performance slot (出演権) — the anime recap film is literally subtitled 'Road to Summer Sonia'", zh: "獎品是 Summer Sonia 的出演權——動畫總集篇電影的副標就叫「Road to Summer Sonia」" } },
+      { domain: { en: "Story · reader notes", zh: "劇情・讀者筆記" }, claim: { en: "Summer Sonia is a 300,000-person festival", zh: "Summer Sonia 是 30 萬人規模的音樂祭" }, verdict: { en: "Confirmed", zh: "確認" }, note: { en: "ja.wikipedia: 30万人規模, held 1–2 Aug 2020, general producer Tsuyoshi Kondo; Yoyogi Art Fes by contrast is ~10,000", zh: "日文維基：30 萬人規模、2020-08-01～02 舉行、總製作人近藤剛；相較之下代々木藝術祭約 1 萬人" } },
+      { domain: { en: "Story · reader notes", zh: "劇情・讀者筆記" }, claim: { en: "KABE genuinely fell out with Kongming and defected to Maezono", zh: "KABE 真的跟孔明鬧翻、投靠前園" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "The falling-out was real to everyone watching but was Kongming's own scheme — ja.wikipedia: 'これは孔明の計略で'. A doctored photo triggered it; KABE went over carrying the plan (Huang Gai's false defection)", zh: "在所有旁觀者眼中是真翻臉，但那是孔明的計——日文維基原文「これは孔明の計略で」。導火線是一張變造照片；KABE 是帶著劇本過去的（黃蓋詐降）" } },
+      { domain: { en: "Story · reader notes", zh: "劇情・讀者筆記" }, claim: { en: "Eiko's Summer Sonia stage is the Green Pool Stage, far from the main stage", zh: "英子的 Summer Sonia 舞台是離主舞台很遠的 Green Pool Stage" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "The stage name is confirmed on ja.wikipedia (グリーン・プールステージ); 'far from the main stage' appears only in reader notes", zh: "舞台名稱經日文維基確認（グリーン・プールステージ）；「離主舞台很遠」只見於讀者筆記" } },
+      { domain: { en: "Story · reader notes", zh: "劇情・讀者筆記" }, claim: { en: "Fourth Kingdom arc = chs. 61–69; Summer Sonia finale from ch. 77", zh: "Fourth Kingdom 篇＝第 61–69 話；Summer Sonia 決戰自第 77 話起" }, verdict: { en: "Unverifiable", zh: "無法查證" }, note: { en: "No public chapter index covers this range. The scattered ja.wikipedia anchors (chs. 63, 64, 67 for the label cast; 76, 79, 84 for Summer Sonia) are consistent with it, which is why the site marks the ranges with ≈", zh: "查無涵蓋此範圍的公開話數索引。日文維基零星的錨點（廠牌相關第 63、64、67 話；Summer Sonia 相關第 76、79、84 話）與之相容，因此站上一律以「約」標示" } },
+      { domain: { en: "Story · reader notes", zh: "劇情・讀者筆記" }, claim: { en: "The three-major crossover was won by telling each label the other two had already signed", zh: "三大廠牌聯名是靠分頭跟每家說「另外兩家已經答應」談成的" }, verdict: { en: "Unverifiable", zh: "無法查證" }, note: { en: "From reader notes only; no public source states the mechanism. The founding facts around it are confirmed, and the chapter is titled 'All warfare is deception' — consistent, but not proof", zh: "僅出自讀者筆記，查無公開來源明述此手法。周邊的創業事實皆可確認，且該話標題正是「兵は詭道なり」——相容，但不等於佐證" } },
+      { domain: { en: "Story · reader notes", zh: "劇情・讀者筆記" }, claim: { en: "Kongming's goal is written 天下太平", zh: "孔明的目標寫作「天下太平」" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "The work uses 天下泰平 ('music-borne peace under heaven'); 天下太平 appears in press coverage of the drama finale. Same meaning, different orthography", zh: "作品用的是「天下泰平」（以音樂達成天下泰平）；「天下太平」出現在日劇最終回的媒體報導裡。意思相同、寫法不同" } },
+      { domain: { en: "Story · reader notes", zh: "劇情・讀者筆記" }, claim: { en: "Fourth Kingdom was founded by Kongming alone", zh: "Fourth Kingdom 是孔明一個人創的" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "Co-founded with Hajime Shoji, an ex-SSS Music producer who left over his 'borderless labels' creed and calls Kongming 'Old Master'", zh: "與東海林 Hajime 共同創設——前 SSS Music 製作人，為「廠牌無界化」的理念離職，稱孔明「老師」" } },
+      { domain: { en: "Story · reader notes", zh: "劇情・讀者筆記" }, claim: { en: "The Yoyogi bout ends with JET JACKET beaten", zh: "代々木一戰以 JET JACKET 落敗收場" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "They protest, then Kongming's herbal decoction cures their singer's throat and they leave promising a rematch — the first rival he converts into an ally, the same pattern as returning AZALEA's likes", zh: "他們上門抗議，孔明的煎藥治好主唱的喉嚨，對方留下「下次再對決」才走——這是他化敵為友的第一次，與後來歸還 AZALEA 讚數是同一個模式" } },
       { domain: { en: "Publication", zh: "出版改編" }, claim: { en: "Serialized on Comic DAYS from 2019-12-31; moved to Weekly Young Magazine in 2021 (#52)", zh: "2019-12-31 起 Comic DAYS 連載；2021 年第 52 號移籍週刊 Young Magazine" }, verdict: { en: "Confirmed", zh: "確認" }, note: { en: "Kodansha & Natalie", zh: "講談社與 Natalie 佐證" } },
       { domain: { en: "Publication", zh: "出版改編" }, claim: { en: "25 volumes by May 2026; vol. 26 due 2026-08-06", zh: "2026-05 共 25 卷；第 26 卷 2026-08-06 發售" }, verdict: { en: "Confirmed", zh: "確認" }, note: { en: "Kodansha product pages", zh: "講談社商品頁直接確認" } },
       { domain: { en: "Publication", zh: "出版改編" }, claim: { en: "Circulation 2.75M (2026) vs 1.6M (2023) — contradiction?", zh: "累計 275 萬（2026）vs 160 萬（2023）矛盾？" }, verdict: { en: "Confirmed", zh: "確認" }, note: { en: "Both true at different dates: 1M (2022) → 1.6M → 2.4M (2025 film) → 2.75M", zh: "皆屬實、時點不同：100 萬（2022）→160→240（2025 電影）→275 萬" } },
@@ -1375,7 +1417,7 @@ window.SITE_PAGES = [
       { domain: { en: "Story · anime", zh: "動畫劇情" }, claim: { en: "Producer named Kondo Tsuyoshi (近藤強)", zh: "製作人名為近藤強" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "Correct kanji: 近藤剛", zh: "正確漢字：近藤剛" } },
       { domain: { en: "Story · anime", zh: "動畫劇情" }, claim: { en: "Only one artist ever cleared the 100k-likes challenge", zh: "只有一位藝人曾達成十萬讚挑戰" }, verdict: { en: "Unverifiable", zh: "無法查證" }, note: { en: "No source states this setting", zh: "查無此設定敘述" } },
       { domain: { en: "Story · anime", zh: "動畫劇情" }, claim: { en: "KABE's real name is 川邊太人", zh: "KABE 本名川邊太人" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "Correct: 河辺太人 — stage name puns on the surname", zh: "正確：河辺太人——藝名取自本姓諧音" } },
-      { domain: { en: "Story · anime", zh: "動畫劇情" }, claim: { en: "KABE won three straight 'DRB' (Dope Rap Battle) titles", zh: "KABE 於「DRB（Dope Rap Battle）」三連霸" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "3 titles + stress ulcers confirmed; official pages never expand the contest name — 'Dope Rap Battle' is speculation", zh: "三連霸與胃潰瘍屬實；官方從未展開大會全名——「Dope Rap Battle」是臆測" } },
+      { domain: { en: "Story · anime", zh: "動畫劇情" }, claim: { en: "KABE won three straight 'DRB' (Dope Rap Battle) titles", zh: "KABE 於「DRB（Dope Rap Battle）」三連霸" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "3 titles + an acute gastric ulcer confirmed; ja.wikipedia records the contest as 'MC Battle Championship DRM' — so even the initials in the claim are off, and nothing ever expands them. Kongming's herbal decoction cures the ulcer on his return", zh: "三連霸與急性胃潰瘍屬實；日文維基寫的是「MCバトル選手権DRM」——連縮寫都不是 DRB，且從無來源展開全名。復出時胃潰瘍是被孔明的煎藥治好的" } },
       { domain: { en: "Story · anime", zh: "動畫劇情" }, claim: { en: "Kongming quotes the Han poem 'The departed grow more distant daily' in the rap battle", zh: "孔明在 rap battle 化用《去者日以疏》" }, verdict: { en: "Confirmed", zh: "確認" }, note: { en: "Ep. 6 lyrics, published by the official account", zh: "第 6 集歌詞，官方帳號公開" } },
       { domain: { en: "Story · anime", zh: "動畫劇情" }, claim: { en: "Steve Kido written as 木戶; won over via a video-game bet", zh: "Steve Kido 漢字「木戶」；用電玩賭注取得合作" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "Official name is katakana only; menma-on-pudding confirmed; the video-game bet is unverifiable (the drama's bet was song quality)", zh: "官方僅片假名；布丁插筍乾屬實；電玩賭注無法查證（日劇版賭的是歌曲品質）" } },
       { domain: { en: "Story · anime", zh: "動畫劇情" }, claim: { en: "Borrowed Arrows: manga ch. 24 / anime ep. 11; ~70k likes", zh: "草船借箭：漫畫第 24 話／動畫第 11 集；一度約 7 萬讚" }, verdict: { en: "Confirmed", zh: "確認" }, note: { en: "Comic DAYS official chapter page", zh: "Comic DAYS 官方章節頁佐證" } },
@@ -1473,7 +1515,15 @@ window.SITE_PAGES = [
       { q: { en: "Summer Sonia attendance grew from 311 to…", zh: "Summer Sonia 的觀眾動員從 311 人成長到…" },
         options: [ { en: "4,300", zh: "4,300 人" }, { en: "13,000", zh: "13,000 人" }, { en: "43,000", zh: "43,000 人" }, { en: "300,000", zh: "300,000 人" } ],
         answer: 2,
-        explain: { en: "311 → 43,000, quoted verbatim on Japanese Wikipedia. (300k is the festival's overall scale setting.)", zh: "311 → 43,000，日文維基逐字記載。（30 萬是音樂祭整體規模的設定。）" } }
+        explain: { en: "311 → 43,000, quoted verbatim on Japanese Wikipedia. (300k is the festival's overall scale setting.)", zh: "311 → 43,000，日文維基逐字記載。（30 萬是音樂祭整體規模的設定。）" } },
+      { q: { en: "At Summer Sonia, Maezono poaches KABE away from Kongming. What actually happened?", zh: "Summer Sonia 上前園把 KABE 從孔明身邊挖走。真相是什麼？" },
+        options: [ { en: "A real falling-out over a photo", zh: "因為一張照片真的翻臉" }, { en: "Kongming's own plan — KABE went over carrying it", zh: "孔明的計——KABE 是帶著劇本過去的" }, { en: "KABE's own idea, kept secret", zh: "KABE 自己的主意，沒告訴任何人" }, { en: "Maezono outbid Fourth Kingdom", zh: "前園出的價碼比 Fourth Kingdom 高" } ],
+        answer: 1,
+        explain: { en: "Japanese Wikipedia is explicit: 'これは孔明の計略で'. The doctored photo made the split look real; KABE then raps the ghostwriting exposé from Maezono's own stage. Huang Gai's false defection before the fire at Red Cliffs.", zh: "日文維基寫得很明白：「これは孔明の計略で」。變造照片讓翻臉看起來是真的；KABE 接著在前園自己的舞台上 rap 出影武者真相。這就是赤壁火攻前的黃蓋詐降。" } },
+      { q: { en: "What did winning the 100,000-likes race actually get Eiko?", zh: "十萬讚之戰打贏，英子實際上拿到了什麼？" },
+        options: [ { en: "A million yen in prize money", zh: "一百萬日圓獎金" }, { en: "A major-label contract", zh: "大廠牌合約" }, { en: "The Summer Sonia performance slot", zh: "Summer Sonia 的出演權" }, { en: "A slot at VOICELL LAND", zh: "VOICELL LAND 的名額" } ],
+        answer: 2,
+        explain: { en: "The stake is the 出演権 at a 300,000-scale festival — which is why the anime recap film is subtitled 'Road to Summer Sonia'. The ¥1M lottery was AZALEA's campaign spend, not the prize.", zh: "賭注是 30 萬人規模音樂祭的出演權——所以動畫總集篇電影副標才叫「Road to Summer Sonia」。一百萬是 AZALEA 的行銷抽獎，不是獎品。" } }
     ],
     cards: [
       { front: { en: "Bird-in-Hand", zh: "手中鳥原則" }, back: { en: "Start from who you are, what you know, whom you know — not from an imagined goal. (Sarasvathy)", zh: "從「我是誰、我會什麼、我認識誰」出發，而不是從想像的目標出發。（Sarasvathy）" } },
@@ -1487,6 +1537,7 @@ window.SITE_PAGES = [
       { front: { en: "BATNA", zh: "BATNA" }, back: { en: "Your power at the table equals your best walk-away alternative. (Fisher & Ury 1981)", zh: "談判桌上的力量＝你最好的退場選項。（Fisher & Ury 1981）" } },
       { front: { en: "Psychological Safety", zh: "心理安全" }, back: { en: "A shared belief that interpersonal risk-taking is safe. (Edmondson 1999)", zh: "團隊共同相信「人際冒險是安全的」。（Edmondson 1999）" } },
       { front: { en: "Loss Aversion", zh: "損失規避" }, back: { en: "Losses hurt about twice as much as equal gains please. (Kahneman & Tversky; λ from 1992)", zh: "損失的痛約是等量獲得的兩倍。（Kahneman & Tversky；係數出自 1992）" } },
+      { front: { en: "Adverse Selection", zh: "逆向選擇" }, back: { en: "Where quality cannot be inspected, the bargains that come to you are the worst ones. (Akerlof 1970)", zh: "在無法驗證品質的市場裡，自己送上門的便宜貨品質最差。（Akerlof 1970）" } },
       { front: { en: "Social Proof", zh: "社會認同" }, back: { en: "When uncertain, people copy others — a seeded like inflates final scores ~25% (Science, 2013).", zh: "不確定時人跟著別人做——先種一個讚可讓最終評分灌高約 25%（Science, 2013）。" } }
     ],
     glossary: [
@@ -1517,6 +1568,7 @@ window.SITE_PAGES = [
       { term: { en: "Framing effect", zh: "框架效應" }, def: { en: "The same facts, worded differently, flip people's choices (Tversky & Kahneman 1981).", zh: "同樣的事實換個說法，選擇就翻轉（Tversky & Kahneman 1981）。" } },
       { term: { en: "Social proof", zh: "社會認同" }, def: { en: "When uncertain, people follow other people (Cialdini 1984).", zh: "不確定時，人跟著別人走（Cialdini 1984）。" } },
       { term: { en: "Choice architecture", zh: "選擇架構" }, def: { en: "Arranging options changes choices without coercion (Thaler & Sunstein 2008).", zh: "重排選項就能改變選擇，不需強迫（Thaler & Sunstein 2008）。" } },
+      { term: { en: "Adverse selection", zh: "逆向選擇" }, def: { en: "Hidden quality drives the good side of a market out and leaves the lemons (Akerlof 1970).", zh: "品質資訊藏起來時，好貨退出市場、只剩爛貨（Akerlof 1970）。" } },
       { term: { en: "Cognitive dissonance", zh: "認知失調" }, def: { en: "Belief–fact collisions demand resolution (Festinger 1957).", zh: "信念與事實相撞時必須找出口（Festinger 1957）。" } }
     ],
     pairs: [
@@ -1527,7 +1579,9 @@ window.SITE_PAGES = [
       { a: { en: "The rap battle", zh: "收編 KABE 的 rap battle" }, b: { en: "Employer branding", zh: "雇主品牌" } },
       { a: { en: "100k-likes race", zh: "十萬讚企劃" }, b: { en: "Network effects", zh: "網路效應" } },
       { a: { en: "Ghostwriter exposé", zh: "揭發影武者" }, b: { en: "Cognitive dissonance", zh: "認知失調" } },
-      { a: { en: "DREAMER breaks 100k", zh: "〈DREAMER〉真正達標" }, b: { en: "Product-market fit", zh: "產品市場適配" } }
+      { a: { en: "DREAMER breaks 100k", zh: "〈DREAMER〉真正達標" }, b: { en: "Product-market fit", zh: "產品市場適配" } },
+      { a: { en: "Huang Gai's false defection", zh: "黃蓋詐降" }, b: { en: "Adverse selection", zh: "逆向選擇" } },
+      { a: { en: "Fourth Kingdom", zh: "Fourth Kingdom 創業" }, b: { en: "Bootstrapping problem", zh: "啟動問題" } }
     ]
   }
 ];
