@@ -25,8 +25,8 @@ window.SITE_PAGES = [
       zh: "解讀漫畫《派對咖孔明》的查證型知識庫——三國軍師諸葛孔明轉生現代澀谷、替歌手操盤的故事。他的每一計都對應一個真實的商管理論；本站每個事實都經過一手來源交叉查證。"
     },
     stats: [
-      { value: 151, label: { en: "Claims fact-checked", zh: "逐條查證敘述" } },
-      { value: 117, label: { en: "Confirmed against sources", zh: "經來源確認屬實" } },
+      { value: 146, label: { en: "Claims fact-checked", zh: "逐條查證敘述" } },
+      { value: 113, label: { en: "Confirmed against sources", zh: "經來源確認屬實" } },
       { value: 13,  label: { en: "Stratagems decoded", zh: "計謀完整解碼" } },
       { value: 41,  label: { en: "Theories mapped", zh: "理論對照條目" } }
     ],
@@ -1371,8 +1371,8 @@ window.SITE_PAGES = [
     icon: "fact_check",
     title: { en: "Fact-Check Report", zh: "查證報告" },
     subtitle: {
-      en: "140 claims from the source analyses were independently cross-checked against primary sources — 10 parallel research agents, 229 lookups — and a later pass added 11 more raised by a reader's own chapter-by-chapter notes. This page lists every correction and the most load-bearing confirmations.",
-      zh: "原始分析中的 140 條敘述經 10 個平行查證代理、229 次檢索，逐條比對一手來源；後續又補查了 11 條來自讀者逐話筆記的敘述。本頁列出全部修正與最關鍵的確認。"
+      en: "146 claims are written up here, every one cross-checked against primary sources: a first pass of 10 parallel research agents over 229 lookups, then a later batch raised by a reader's own chapter-by-chapter notes. This page lists every correction and the most load-bearing confirmations.",
+      zh: "本頁逐條寫出 146 條敘述，每一條都比對過一手來源：第一輪由 10 個平行查證代理、229 次檢索完成，後續再補一批來自讀者逐話筆記的敘述。本頁列出全部修正與最關鍵的確認。"
     },
     lead: [
       { en: "Verdicts: Confirmed = directly supported by a reliable source · Partly correct = right in outline, wrong in a detail (the note gives the correct version) · Unverifiable = no adequate source found. Zero claims were outright false. Full tables with links live in the repository's docs.",
@@ -1381,9 +1381,9 @@ window.SITE_PAGES = [
         zh: "讀者筆記那一批標為「劇情・讀者筆記」領域。凡是話數範圍只出現在筆記裡、查無公開索引可佐證的，一律照實判定，不會默默把數字收進正文。" }
     ],
     tiles: [
-      { value: 151, label: { en: "Claims checked", zh: "查證敘述" }, tone: "plain" },
-      { value: 117, label: { en: "Confirmed", zh: "確認" }, tone: "ok" },
-      { value: 28,  label: { en: "Partly correct", zh: "部分正確" }, tone: "warn" },
+      { value: 146, label: { en: "Claims checked", zh: "查證敘述" }, tone: "plain" },
+      { value: 113, label: { en: "Confirmed", zh: "確認" }, tone: "ok" },
+      { value: 27,  label: { en: "Partly correct", zh: "部分正確" }, tone: "warn" },
       { value: 6,   label: { en: "Unverifiable", zh: "無法查證" }, tone: "bad" }
     ],
     columns: [

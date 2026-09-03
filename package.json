@@ -1,0 +1,12 @@
+{
+  "name": "kongming-ba",
+  "private": true,
+  "description": "Build-time helpers for the Kongming Codex static site. Nothing here ships to the browser.",
+  "scripts": {
+    "prerender": "node tools/prerender.js",
+    "check": "node tools/check-tallies.js && node tools/prerender.js --check"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0"
+  }
+}

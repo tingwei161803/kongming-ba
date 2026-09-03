@@ -3,3 +3,6 @@ tmp/
 
 # macOS
 .DS_Store
+
+# 只有 build 工具用得到，網站本身零依賴
+node_modules/
