@@ -606,7 +606,7 @@ window.SITE_PAGES = [
         tags: ["Knight 1921"],
         details: [
           { label: { en: "Thinker", zh: "大師" }, value: { en: "Frank H. Knight", zh: "Frank H. Knight" } },
-          { label: { en: "Source", zh: "原典" }, value: { en: "Risk, Uncertainty and Profit (1921)", zh: "《Risk, Uncertainty and Profit》(1921)" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "Risk, Uncertainty and Profit (1921)", zh: "《Risk, Uncertainty and Profit》（1921）" } } ] },
       { slug: "bricolage", category: "eff",
         title: { en: "Entrepreneurial Bricolage", zh: "創業拼裝" },
         summary: { en: "Making do with whatever is at hand — creation from 'nothing'.", zh: "就手邊現有的東西湊出解法——從「無」中創造。" },
@@ -620,7 +620,7 @@ window.SITE_PAGES = [
         overview: { en: "The theoretical ancestor of the crazy quilt: Kobayashi's venue, KABE's voice, the fans' likes — each commitment reshapes what the venture becomes.", zh: "拼布原則的理論祖先：小林的場地、KABE 的聲音、粉絲的讚——每一筆承諾都改寫事業的形狀。" },
         tags: ["Freeman 1984"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "R. Edward Freeman, Strategic Management: A Stakeholder Approach (Pitman, 1984)", zh: "R. Edward Freeman《Strategic Management: A Stakeholder Approach》(Pitman, 1984)" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "R. Edward Freeman, Strategic Management: A Stakeholder Approach (Pitman, 1984)", zh: "R. Edward Freeman《Strategic Management: A Stakeholder Approach》（Pitman, 1984）" } } ] },
 
       { slug: "stp", category: "mkt",
         title: { en: "STP", zh: "STP 定位" },
@@ -636,7 +636,7 @@ window.SITE_PAGES = [
         overview: { en: "The Yoyogi comeback is not just promotion: the performance is redesigned (product), the bad booth is converted (place), staff and timing orchestrated (people/process). Marketing failures are usually mix misalignment, not 'not enough ads'.", zh: "代々木逆轉不只是宣傳：表演被重新設計（產品）、爛攤位被轉化（通路）、人員與時間被編排（人員／流程）。行銷失敗通常是組合沒對齊，不是「廣告不夠」。" },
         tags: ["McCarthy 1960", "Booms & Bitner 1981"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "McCarthy, Basic Marketing (1960); 7P: Booms & Bitner (1981). The term 'marketing mix' is Borden's (1953/1964)", zh: "McCarthy《Basic Marketing》(1960)；7P：Booms & Bitner (1981)；「行銷組合」一詞出自 Borden（1953/1964）" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "McCarthy, Basic Marketing (1960); 7P: Booms & Bitner (1981). The term 'marketing mix' is Borden's (1953/1964)", zh: "McCarthy《Basic Marketing》（1960）；7P：Booms & Bitner（1981）；「行銷組合」一詞出自 Borden（1953/1964）" } } ] },
       { slug: "aida", category: "mkt",
         title: { en: "AIDA & the Funnel", zh: "AIDA 與行銷漏斗" },
         summary: { en: "Attention → Interest → Desire → Action, drawn as a narrowing funnel.", zh: "注意 → 興趣 → 慾望 → 行動，畫成逐層收窄的漏斗。" },
@@ -657,7 +657,7 @@ window.SITE_PAGES = [
         overview: { en: "Kongming's entire playbook: venue tricks, fake rumors, street shows, disguised flash performances — near-zero budget, aimed at the opponent's blind spot.", zh: "孔明的整套打法：動線戰、假消息、街頭演唱、假扮快閃——幾乎零預算，打對手的認知盲區。" },
         tags: ["Levinson 1984"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "Jay Conrad Levinson, Guerrilla Marketing (1984)", zh: "Jay Conrad Levinson《Guerrilla Marketing》(1984)" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "Jay Conrad Levinson, Guerrilla Marketing (1984)", zh: "Jay Conrad Levinson《Guerrilla Marketing》（1984）" } } ] },
       { slug: "viral", category: "mkt",
         title: { en: "Viral Marketing & Traffic Hijacking", zh: "病毒式行銷與流量挪用" },
         summary: { en: "Users become the medium; or you redirect attention someone else paid for.", zh: "讓使用者成為媒介；或把別人花錢聚的注意力導向自己。" },
@@ -678,7 +678,7 @@ window.SITE_PAGES = [
         overview: { en: "Eiko sells emotional shelter, not vocal technique — that is her value proposition. From club to festival to label to overseas, her canvas fills in block by block.", zh: "英子賣的是情緒的容身處，不是唱功——這就是她的價值主張。從夜店、音樂祭、廠牌到海外，她的商業模式畫布一格一格被填滿。" },
         tags: ["Osterwalder & Pigneur"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "Business Model Generation (2010); Value Proposition Design (2014); the nine blocks date to Osterwalder's 2005 PhD thesis", zh: "《Business Model Generation》(2010)、《Value Proposition Design》(2014)；九宮格最早見 2005 年博士論文" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "Business Model Generation (2010); Value Proposition Design (2014); the nine blocks date to Osterwalder's 2005 PhD thesis", zh: "《Business Model Generation》（2010）、《Value Proposition Design》（2014）；九宮格最早見 2005 年博士論文" } } ] },
 
       { slug: "five-forces", category: "strat",
         title: { en: "Porter's Five Forces", zh: "波特五力" },
@@ -693,7 +693,7 @@ window.SITE_PAGES = [
         overview: { en: "Eiko = focused differentiation (soulful authenticity for a niche); Karasawa-era AZALEA = standardized mass-market idol formula. Their collision is the theory staged.", zh: "英子＝集中差異化（為小眾提供靈魂共鳴）；唐澤時期的 AZALEA＝標準化大眾偶像公式。兩者對撞就是理論的舞台劇。" },
         tags: ["Porter 1980"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "Competitive Strategy (1980); the focus split detailed in Competitive Advantage (1985)", zh: "《Competitive Strategy》(1980)；集中戰略的細分見《Competitive Advantage》(1985)" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "Competitive Strategy (1980); the focus split detailed in Competitive Advantage (1985)", zh: "《Competitive Strategy》（1980）；集中戰略的細分見《Competitive Advantage》（1985）" } } ] },
       { slug: "rbv", category: "strat",
         title: { en: "Resource-Based View (VRIN)", zh: "資源基礎觀點（VRIN）" },
         summary: { en: "Sustained advantage comes from valuable, rare, inimitable, non-substitutable resource bundles.", zh: "持續優勢來自有價值、稀有、難模仿、難替代的資源組合。" },
@@ -707,14 +707,14 @@ window.SITE_PAGES = [
         overview: { en: "Fourth Kingdom enters as an indie label from the industry's edge, then brokers the three-major crossover that rewrites the value chain — the classic disruption arc.", zh: "Fourth Kingdom 以獨立廠牌從產業邊緣切入，再促成改寫價值鏈的三大廠牌聯名——標準的破壞式創新劇本。" },
         tags: ["Christensen"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "Bower & Christensen, HBR 73(1), 1995; The Innovator's Dilemma (1997)", zh: "Bower & Christensen，HBR 73(1), 1995；《創新的兩難》(1997)" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "Bower & Christensen, HBR 73(1), 1995; The Innovator's Dilemma (1997)", zh: "Bower & Christensen，HBR 73(1), 1995；《創新的兩難》（1997）" } } ] },
       { slug: "judo", category: "strat",
         title: { en: "Judo Strategy", zh: "柔道戰略" },
         summary: { en: "Use the bigger opponent's weight and momentum to throw them.", zh: "借體重比你重的對手的重量與慣性摔倒他。" },
         overview: { en: "Borrowed Arrows is a perfect judo throw: the more AZALEA spends gathering a crowd, the bigger the crowd the fake QR code redirects. Attribution fixed here: the 1999 HBR article is Yoffie & Cusumano; the 2001 BOOK is Yoffie & KWAK.", zh: "草船借箭是完美的柔道摔：AZALEA 砸越多錢聚人，被假 QR code 導走的流量越大。本站修正過的歸屬：1999 HBR 文章是 Yoffie & Cusumano；2001 年專書作者是 Yoffie 與 Kwak。" },
         tags: ["Yoffie"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "HBR 77(1), 1999, pp. 70–81; book: Judo Strategy (HBS Press, 2001, Yoffie & Kwak)", zh: "HBR 77(1), 1999, pp. 70–81；專書《Judo Strategy》(HBS Press, 2001，Yoffie & Kwak)" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "HBR 77(1), 1999, pp. 70–81; book: Judo Strategy (HBS Press, 2001, Yoffie & Kwak)", zh: "HBR 77(1), 1999, pp. 70–81；專書《Judo Strategy》（HBS Press, 2001，Yoffie & Kwak）" } } ] },
       { slug: "pmf", category: "strat",
         title: { en: "Product-Market Fit", zh: "產品市場適配（PMF）" },
         summary: { en: "Before PMF, marketing is waste; after PMF, growth pulls itself.", zh: "PMF 之前行銷是浪費；PMF 之後成長自己會來。" },
@@ -757,7 +757,7 @@ window.SITE_PAGES = [
         overview: { en: "'100,000 likes by the deadline' is a textbook OKR: the Summer Sonia dream translated into one measurable, time-boxed key result that drives recruiting, product and channel decisions.", zh: "「期限內十萬讚」是教科書級 OKR：Summer Sonia 的夢想被翻譯成一個可量測、有時限的關鍵結果，拉動招募、產品與通路的所有決策。" },
         tags: ["Grove", "Doerr"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "Andy Grove's Intel practice (High Output Management, 1983); John Doerr, Measure What Matters (2018)", zh: "Andy Grove 在 Intel 的實務（《High Output Management》1983）；John Doerr《Measure What Matters》(2018)" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "Andy Grove's Intel practice (High Output Management, 1983); John Doerr, Measure What Matters (2018)", zh: "Andy Grove 在 Intel 的實務（《High Output Management》1983）；John Doerr《Measure What Matters》（2018）" } } ] },
 
       { slug: "psych-safety", category: "org",
         title: { en: "Psychological Safety", zh: "心理安全" },
@@ -786,21 +786,21 @@ window.SITE_PAGES = [
         overview: { en: "Kongming builds alternatives before he sits down: the wager with Eiko's mother, the festival-vs-likes choice, the label negotiations — every table is set with a ready plan B.", zh: "孔明談判前總是先把替代路徑做出來：與翔子的賭約、音樂祭 vs 十萬讚的選擇、廠牌斡旋——每張談判桌都先擺好 B 計畫。" },
         tags: ["Fisher & Ury 1981"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "Getting to Yes (1981), Harvard Negotiation Project", zh: "《Getting to Yes》(1981)，哈佛談判專案" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "Getting to Yes (1981), Harvard Negotiation Project", zh: "《Getting to Yes》（1981），哈佛談判專案" } } ] },
       { slug: "decision-tree", category: "org",
         title: { en: "Decision Analysis", zh: "決策樹與期望值" },
         summary: { en: "Split a fuzzy choice into options, probabilities, outcomes and expected values.", zh: "把模糊抉擇拆成選項、機率、結果與期望值。" },
         overview: { en: "'Guaranteed 10k-person local festival, or the 100k-likes gamble for Summer Sonia?' — the series keeps handing readers ready-made decision-tree exercises.", zh: "「保底一萬人的地方音樂祭，還是賭十萬讚上 Summer Sonia？」——這部作品不斷送讀者現成的決策樹習題。" },
         tags: ["Raiffa 1968"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "Howard Raiffa, Decision Analysis (1968)", zh: "Howard Raiffa《Decision Analysis》(1968)" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "Howard Raiffa, Decision Analysis (1968)", zh: "Howard Raiffa《Decision Analysis》（1968）" } } ] },
       { slug: "flow", category: "org",
         title: { en: "Flow", zh: "心流" },
         summary: { en: "Total absorption where time distorts — the optimal experience.", zh: "全神貫注到時間感消失的最佳體驗。" },
         overview: { en: "KABE's rematch against his old rival is often read as a flow moment ('time slowed down') — note this specific detail lacks a primary-source anchor and is flagged in our fact-check.", zh: "KABE 對宿敵的再戰常被讀成心流時刻（「時間變慢」）——注意此細節缺一手佐證，查證報告中有標註。" },
         tags: ["Csikszentmihalyi 1990"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "Flow: The Psychology of Optimal Experience (1990)", zh: "《Flow: The Psychology of Optimal Experience》(1990)" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "Flow: The Psychology of Optimal Experience (1990)", zh: "《Flow: The Psychology of Optimal Experience》（1990）" } } ] },
 
       { slug: "prospect", category: "beh",
         title: { en: "Prospect Theory & Loss Aversion", zh: "前景理論與損失規避" },
@@ -822,7 +822,7 @@ window.SITE_PAGES = [
         overview: { en: "The deep mechanism of the whole 100k-likes arc. Kongming exploits it (borrowed crowds create conformity) and then transcends it (the real breakthrough is DREAMER moving people).", zh: "整個十萬讚篇的深層機制。孔明先利用它（借來的人潮製造從眾），最終超越它（真正的突破是〈DREAMER〉打動人心）。" },
         tags: ["Cialdini 1984"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "Influence: The Psychology of Persuasion (1984), one of the six principles", zh: "《影響力》(1984) 六大原則之一" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "Influence: The Psychology of Persuasion (1984), one of the six principles", zh: "《影響力》（1984） 六大原則之一" } } ] },
       { slug: "scarcity", category: "beh",
         title: { en: "Scarcity", zh: "稀缺性效應" },
         summary: { en: "The less available, the more desired — proven with a jar of cookies.", zh: "越少越想要——用一罐餅乾就能證明。" },
@@ -836,21 +836,21 @@ window.SITE_PAGES = [
         overview: { en: "The Stone Sentinel Maze is a physical nudge: nobody is forced anywhere; the space simply reorders the options until staying to listen is the path of least resistance.", zh: "石兵八陣就是物理版輕推：沒有強迫任何人，空間只是重排了選項，直到「留下來聽歌」變成阻力最小的路。" },
         tags: ["Thaler & Sunstein 2008"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "Nudge (Yale University Press, 2008)", zh: "《Nudge》(Yale UP, 2008)" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "Nudge (Yale University Press, 2008)", zh: "《Nudge》（Yale UP, 2008）" } } ] },
       { slug: "dissonance", category: "beh",
         title: { en: "Cognitive Dissonance", zh: "認知失調" },
         summary: { en: "When belief collides with fact, something has to give.", zh: "信念與事實相撞時，總有一邊要讓步。" },
         overview: { en: "'My idols were lip-syncing' — the fans' dissonance needs an exit, and Kongming provides one: the authentic, instrument-playing AZALEA, reborn on stage.", zh: "「我支持的偶像在假唱」——粉絲的失調需要出口，孔明給了一個：摘下面具、真實演奏的新生 AZALEA。" },
         tags: ["Festinger 1957"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "A Theory of Cognitive Dissonance (Stanford UP, 1957)", zh: "《A Theory of Cognitive Dissonance》(Stanford UP, 1957)" } } ] },
+          { label: { en: "Source", zh: "原典" }, value: { en: "A Theory of Cognitive Dissonance (Stanford UP, 1957)", zh: "《A Theory of Cognitive Dissonance》（Stanford UP, 1957）" } } ] },
       { slug: "variable-reward", category: "beh",
         title: { en: "Variable Rewards", zh: "變動獎勵" },
         summary: { en: "Uncertain jackpots grip harder than certain small wins — the slot-machine principle.", zh: "不確定的大獎比確定的小獎更抓人——拉霸機原理。" },
         overview: { en: "'Scan and maybe win ¥1M' is a variable-ratio reinforcement schedule on a truck. Skinner documented the mechanism; product design later industrialized it.", zh: "「掃碼也許中一百萬」就是開上卡車的變動比率增強時制。Skinner 記錄了機制；產品設計後來把它工業化。" },
         tags: ["Skinner", "Hooked"],
         details: [
-          { label: { en: "Source", zh: "原典" }, value: { en: "Ferster & Skinner, Schedules of Reinforcement (1957); popularized by Nir Eyal's Hooked (2014)", zh: "Ferster & Skinner《Schedules of Reinforcement》(1957)；Nir Eyal《Hooked》(2014) 通俗化" } } ] }
+          { label: { en: "Source", zh: "原典" }, value: { en: "Ferster & Skinner, Schedules of Reinforcement (1957); popularized by Nir Eyal's Hooked (2014)", zh: "Ferster & Skinner《Schedules of Reinforcement》（1957）；Nir Eyal《Hooked》（2014） 通俗化" } } ] }
     ]
   },
   /* ================================================ effectuation ======= */
@@ -1065,7 +1065,7 @@ window.SITE_PAGES = [
         blocks: [
           { type: "p", text: {
             en: "The term 'marketing mix' is Neil Borden's (1953 AMA address, 1964 article, inspired by Culliton's 1948 'mixer of ingredients'); E. Jerome McCarthy compressed it into the 4Ps in Basic Marketing (1960); Booms & Bitner added People, Process, Physical Evidence for services (1981, in the AMA's Marketing of Services, pp. 47–51).",
-            zh: "「行銷組合」一詞是 Neil Borden 的（1953 年 AMA 演說、1964 年文章，靈感來自 Culliton 1948 的「成分調配者」）；McCarthy 在《Basic Marketing》(1960) 把它壓縮成 4P；Booms & Bitner (1981) 為服務業加上人員、流程、實體證據（收錄於 AMA《Marketing of Services》pp. 47–51）。"
+            zh: "「行銷組合」一詞是 Neil Borden 的（1953 年 AMA 演說、1964 年文章，靈感來自 Culliton 1948 的「成分調配者」）；McCarthy 在《Basic Marketing》（1960） 把它壓縮成 4P；Booms & Bitner（1981） 為服務業加上人員、流程、實體證據（收錄於 AMA《Marketing of Services》pp. 47–51）。"
           } },
           { type: "p", text: {
             en: "The Yoyogi comeback is a full-mix redesign, not a promotion stunt: the show itself is rebuilt (Product), the worst booth becomes an intake funnel (Place), staff choreography and timing carry the experience (People/Process). Diagnosing marketing failure as 'not enough ads' usually misses a misaligned mix.",
@@ -1166,7 +1166,7 @@ window.SITE_PAGES = [
         blocks: [
           { type: "p", text: {
             en: "Michael Porter's 'How Competitive Forces Shape Strategy' (HBR 57(2), 1979, pp. 137–145 — his first HBR piece) and Competitive Strategy (1980). The manga stages all five forces: incumbent acts (Mia, AZALEA), entry barriers (no-name singers cannot reach big festivals), buyer power (scarce audience attention), supplier power (three label giants own the channels), substitutes (every other entertainment).",
-            zh: "波特〈How Competitive Forces Shape Strategy〉（HBR 57(2), 1979, pp. 137–145——他的第一篇 HBR 文章）與《Competitive Strategy》(1980)。漫畫把五力全演了出來：既有競爭者（Mia、AZALEA）、進入障礙（無名歌手上不了大型音樂祭）、買方議價力（稀缺的觀眾注意力）、供應商議價力（三大廠牌掌握通路）、替代品（所有其他娛樂）。"
+            zh: "波特〈How Competitive Forces Shape Strategy〉（HBR 57(2), 1979, pp. 137–145——他的第一篇 HBR 文章）與《Competitive Strategy》（1980）。漫畫把五力全演了出來：既有競爭者（Mia、AZALEA）、進入障礙（無名歌手上不了大型音樂祭）、買方議價力（稀缺的觀眾注意力）、供應商議價力（三大廠牌掌握通路）、替代品（所有其他娛樂）。"
           } },
           { type: "p", text: {
             en: "Generic strategies (1980; the focus variants detailed in 1985's Competitive Advantage): Eiko runs focused differentiation — soulful authenticity for a niche; Karasawa-era AZALEA runs the standardized mass-market formula. Their collision is the two strategies staged as drama. The villain's '¥5 trillion ad agency' is an in-story exaggeration — the real-world analogue earns about ¥1.4T — a reminder to never quote fiction's numbers as facts.",
@@ -1194,7 +1194,7 @@ window.SITE_PAGES = [
         blocks: [
           { type: "p", text: {
             en: "Bower & Christensen, 'Disruptive Technologies: Catching the Wave' (HBR 73(1), 1995) and The Innovator's Dilemma (1997): disruption by definition starts from low-end or new-market footholds the incumbents rationally ignore.",
-            zh: "Bower 與 Christensen〈Disruptive Technologies: Catching the Wave〉（HBR 73(1), 1995）與《創新的兩難》(1997)：破壞式創新依定義從低階或新市場立足點出發——巨頭理性地忽略的地方。"
+            zh: "Bower 與 Christensen〈Disruptive Technologies: Catching the Wave〉（HBR 73(1), 1995）與《創新的兩難》（1997）：破壞式創新依定義從低階或新市場立足點出發——巨頭理性地忽略的地方。"
           } },
           { type: "p", text: {
             en: "Fourth Kingdom enters as a nobody indie label, then brokers the three-major crossover (manga ch. 64–65, invoking Sun Tzu's genuine line 'all warfare is based on deception') — removing the boundary the giants took for granted and rewriting the value chain from the edge.",
@@ -1343,11 +1343,11 @@ window.SITE_PAGES = [
             rows: [
               [ { en: "Loss aversion", zh: "損失規避" }, { en: "Kahneman & Tversky, Econometrica 47(2), 1979 (λ≈2.25 is from the 1992 paper)", zh: "Kahneman & Tversky，Econometrica 47(2), 1979（λ≈2.25 出自 1992 論文）" }, { en: "'Not liking = losing a shot at ¥1M'", zh: "「不按讚＝損失中百萬的機會」" } ],
               [ { en: "Framing", zh: "框架效應" }, { en: "Tversky & Kahneman, Science 211, 1981, pp. 453–458", zh: "Tversky & Kahneman，Science 211, 1981, pp. 453–458" }, { en: "Worst booth reframed as ambush; scandal reframed as authenticity", zh: "爛攤位重框成奇襲；醜聞重框成真實性" } ],
-              [ { en: "Social proof", zh: "社會認同" }, { en: "Cialdini, Influence (1984); Muchnik et al., Science 341 (2013)", zh: "Cialdini《影響力》(1984)；Muchnik et al.，Science 341（2013）" }, { en: "The entire likes economy", zh: "整個按讚經濟" } ],
+              [ { en: "Social proof", zh: "社會認同" }, { en: "Cialdini, Influence (1984); Muchnik et al., Science 341 (2013)", zh: "Cialdini《影響力》（1984）；Muchnik et al.，Science 341（2013）" }, { en: "The entire likes economy", zh: "整個按讚經濟" } ],
               [ { en: "Scarcity", zh: "稀缺性" }, { en: "Worchel, Lee & Adewole, JPSP 32(5), 1975 (the cookie jar)", zh: "Worchel, Lee & Adewole，JPSP 32(5), 1975（餅乾罐實驗）" }, { en: "Limited-time lotteries, one-night shows", zh: "限時抽獎、一夜限定演出" } ],
-              [ { en: "Choice architecture", zh: "選擇架構" }, { en: "Thaler & Sunstein, Nudge (2008)", zh: "Thaler & Sunstein《Nudge》(2008)" }, { en: "The maze: nobody forced, options reordered", zh: "迷宮：不強迫任何人，只重排選項" } ],
+              [ { en: "Choice architecture", zh: "選擇架構" }, { en: "Thaler & Sunstein, Nudge (2008)", zh: "Thaler & Sunstein《Nudge》（2008）" }, { en: "The maze: nobody forced, options reordered", zh: "迷宮：不強迫任何人，只重排選項" } ],
               [ { en: "Cognitive dissonance", zh: "認知失調" }, { en: "Festinger (1957)", zh: "Festinger（1957）" }, { en: "'My idols were lip-syncing' — and the exit Kongming provides", zh: "「我的偶像在假唱」——以及孔明給的出口" } ],
-              [ { en: "Variable rewards", zh: "變動獎勵" }, { en: "Ferster & Skinner (1957); Eyal's Hooked (2014)", zh: "Ferster & Skinner（1957）；Eyal《Hooked》(2014)" }, { en: "The scan-to-maybe-win truck", zh: "掃碼也許中獎的卡車" } ]
+              [ { en: "Variable rewards", zh: "變動獎勵" }, { en: "Ferster & Skinner (1957); Eyal's Hooked (2014)", zh: "Ferster & Skinner（1957）；Eyal《Hooked》（2014）" }, { en: "The scan-to-maybe-win truck", zh: "掃碼也許中獎的卡車" } ]
             ]
           }
         ]
@@ -1454,7 +1454,7 @@ window.SITE_PAGES = [
       { domain: { en: "Theory sources", zh: "理論出處" }, claim: { en: "Edmondson 1999 (ASQ 44(2), 350–383); Google Project Aristotle 2015", zh: "Edmondson 1999（ASQ 44(2), 350–383）；Google Project Aristotle 2015" }, verdict: { en: "Confirmed", zh: "確認" }, note: { en: "Project ran 2012–2015; conclusions published Nov 2015", zh: "專案 2012–2015；結論 2015-11 公布" } },
       { domain: { en: "Theory sources", zh: "理論出處" }, claim: { en: "Employer brand paper by Barrow & Ambler (1996)", zh: "雇主品牌論文 Barrow & Ambler（1996）" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "Author order reversed: Ambler & Barrow, JBM 4(3), 185–206", zh: "作者順序寫反：Ambler & Barrow，JBM 4(3), 185–206" } },
       { domain: { en: "Theory sources", zh: "理論出處" }, claim: { en: "WHO classified burnout as a disease (ICD-11, 2019)", zh: "WHO 於 ICD-11（2019）將倦怠列為疾病" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "Listed as an OCCUPATIONAL PHENOMENON — WHO explicitly says it is not a medical condition", zh: "列為「職業現象」——WHO 明言不是疾病" } },
-      { domain: { en: "Theory sources", zh: "理論出處" }, claim: { en: "BATNA from Fisher & Ury, Getting to Yes (1981)", zh: "BATNA 出自 Fisher & Ury《Getting to Yes》(1981)" }, verdict: { en: "Confirmed", zh: "確認" }, note: { en: "Patton joined the 1991 second edition", zh: "Patton 於 1991 年二版加入" } },
+      { domain: { en: "Theory sources", zh: "理論出處" }, claim: { en: "BATNA from Fisher & Ury, Getting to Yes (1981)", zh: "BATNA 出自 Fisher & Ury《Getting to Yes》（1981）" }, verdict: { en: "Confirmed", zh: "確認" }, note: { en: "Patton joined the 1991 second edition", zh: "Patton 於 1991 年二版加入" } },
       { domain: { en: "Theory sources", zh: "理論出處" }, claim: { en: "Loss aversion coefficient ~2× is from the 1979 prospect-theory paper", zh: "損失規避約 2 倍係數出自 1979 前景理論論文" }, verdict: { en: "Partly correct", zh: "部分正確" }, note: { en: "λ≈2.25 is from Tversky & Kahneman 1992; 1979 gave the concept only; meta-analyses find λ 1.5–2.5", zh: "λ≈2.25 出自 1992 論文；1979 只提出概念；後設分析 λ 約 1.5–2.5" } },
       { domain: { en: "Theory sources", zh: "理論出處" }, claim: { en: "'Marketing gets them in the door; product keeps them' has a known author", zh: "「行銷帶進門、產品留住人」金句有明確出處" }, verdict: { en: "Unverifiable", zh: "無法查證" }, note: { en: "A folk aphorism; no authoritative source found — quote the idea, not a fake author", zh: "坊間通則、查無權威出處——引用概念，別安假作者" } },
       { domain: { en: "Three Kingdoms", zh: "三國典故" }, claim: { en: "Borrowing arrows historically belongs to Sun Quan, not Zhuge Liang", zh: "草船借箭史實原型是孫權、非諸葛亮" }, verdict: { en: "Confirmed", zh: "確認" }, note: { en: "Ruxu 213 AD, per the Weilüe in Pei Songzhi's commentary (not the Wu Li); Romance ch. 46 reassigned it", zh: "濡須 213 年，裴注引《魏略》（非《吳歷》）；演義 46 回移花接木" } },
