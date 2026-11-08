@@ -34,7 +34,7 @@ try {
 
 const ROOT = path.resolve(__dirname, '..');
 const PAGES = ['index', 'primer', 'world', 'stratagems', 'theories', 'effectuation',
-               'marketing', 'strategy', 'verification', 'arcade'];
+               'marketing', 'strategy', 'people', 'verification', 'arcade'];
 const LANG_DIRS = ['', 'zh-Hant/'];
 
 /* The snapshot slot. Non-greedy so a page with stray </main> text still cuts
