@@ -282,34 +282,38 @@
      INIT
      ===================================================================== */
   /* ---------- GitHub star count (public API, no auth) ---------- */
-  /* The count stays hidden unless a real, non-zero number arrives. The answer
-     is cached per tab session — anonymous API calls are capped at 60/hour, and
-     every page view used to spend one (and show "Star —" or "0" once refused). */
+  /* The count stays hidden unless a real, non-zero number arrives.
+     Read through shields.io's JSON badge rather than api.github.com: GitHub
+     allows 60 anonymous calls an hour per IP, and once refused the browser
+     logs a 403 and the chip showed "Star —". shields caches server-side and
+     answers with CORS. The answer is also cached for the tab session. */
   function loadStars() {
     var el = document.getElementById("ghStar");
     if (!el) return;
     var r = el.dataset.repo;
     if (!r || r.indexOf("{{") === 0) return;             // unfilled → skip
     var key = "gh-stars:" + r;
-    function show(n) {
+    function show(v) {
       var c = document.getElementById("ghStarCount");
-      if (!c || typeof n !== "number" || !(n > 0)) return;
-      c.textContent = n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, "") + "k" : String(n);
+      v = String(v == null ? "" : v).trim();
+      /* "12", "1.2k" … anything else ("0", "inaccessible", "") stays hidden */
+      if (!c || !/^\d+(\.\d+)?k?$/i.test(v) || /^0+$/.test(v)) return;
+      c.textContent = v;
       c.hidden = false;
     }
     var cached = null;
     try { cached = sessionStorage.getItem(key); } catch (e) { /* storage blocked */ }
-    if (cached !== null) { show(Number(cached)); return; }
+    if (cached !== null) { show(cached); return; }
     if (typeof fetch !== "function") return;
-    fetch("https://api.github.com/repos/" + r, { headers: { Accept: "application/vnd.github+json" } })
+    fetch("https://img.shields.io/github/stars/" + r + ".json")
       .then(function (res) { return res.ok ? res.json() : null; })
       .then(function (j) {
-        var n = j && typeof j.stargazers_count === "number" ? j.stargazers_count : 0;
-        try { sessionStorage.setItem(key, String(n)); } catch (e) { /* ignore */ }
-        show(n);
+        var v = j && (j.value != null ? j.value : j.message);
+        try { sessionStorage.setItem(key, String(v == null ? "" : v)); } catch (e) { /* ignore */ }
+        show(v);
       })
       .catch(function () {
-        try { sessionStorage.setItem(key, "0"); } catch (e) { /* ignore */ }
+        try { sessionStorage.setItem(key, ""); } catch (e) { /* ignore */ }
       });
   }
 
