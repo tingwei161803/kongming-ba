@@ -30,6 +30,32 @@ window.SITE_PAGES = [
       { value: 13,  label: { en: "Stratagems decoded", zh: "計謀完整解碼" } },
       { value: 41,  label: { en: "Theories mapped", zh: "理論對照條目" } }
     ],
+    /* hero: the stat line and CTA pull their numbers from `stats` above
+       ({0}..{3}), so tools/check-tallies.js still guards a single source */
+    hero: {
+      glyph: "計",
+      vertical: "臥龍・諸葛孔明",
+      headline: {
+        en: "A 1,800‑year‑old strategist, one Shibuya stage.",
+        zh: "一千八百年前的軍師，一座澀谷的舞台。"
+      },
+      statLine: {
+        en: "{0} claims fact-checked, {1} of them confirmed against sources. {2} stratagems decoded, {3} theories mapped.",
+        zh: "{0} 條敘述逐條查證，其中 {1} 條經來源確認屬實；解碼 {2} 條計謀，對照 {3} 個理論。"
+      },
+      cta: { href: "stratagems.html", label: { en: "Read the {2} stratagems", zh: "讀孔明的 {2} 條計謀" } },
+      cta2: { href: "primer.html", label: { en: "Or start with the 3-minute primer", zh: "或先看三分鐘白話版" } }
+    },
+    lineup: {
+      title: { en: "Every stratagem, in the order it lands", zh: "每一計，依登場順序排開" },
+      note: {
+        en: "From the maze nightclub in chapter 3 to the horse-racing gambit in volume 16. Open any one for its source, its history and the theory behind it.",
+        zh: "從第 3 話的迷宮夜店，到第 16 卷的賽馬篇。點任一計，看它的出處、史實與背後的理論。"
+      }
+    },
+    council: {
+      title: { en: "The war council, in ten rooms", zh: "軍議十篇" }
+    },
     quote: {
       text: {
         en: "Stratagems only get people through the door. What makes them stay is always the product itself.",
@@ -281,6 +307,7 @@ window.SITE_PAGES = [
   {
     slug: "stratagems",
     layout: "gallery",
+    view: "codex",          // rows in chapter order instead of a card grid
     icon: "swords",
     title: { en: "Stratagem Codex", zh: "計謀對照" },
     subtitle: {
