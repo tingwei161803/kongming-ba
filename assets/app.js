@@ -35,10 +35,67 @@
     var teardowns = [];   // observers / listeners to disconnect before each repaint
 
     /* ---------- shared bits ---------- */
+    /* Every inner page is one "room" of the war council and keeps the same
+       numeral it has in the home page's table of contents (壹, 貳, 參 …). */
+    var NUMERALS = ["壹", "貳", "參", "肆", "伍", "陸", "柒", "捌", "玖", "拾", "拾壹", "拾貳"];
+    function rooms() { return L.pages.filter(function (q) { return q.slug !== "home"; }); }
+    function numeral(slug) {
+      var list = rooms();
+      for (var i = 0; i < list.length; i++) if (list[i].slug === slug) return NUMERALS[i] || "";
+      return "";
+    }
+
     function head(p) {
       var sub = t(p.subtitle)
         ? '<p class="page-head__sub">' + esc(t(p.subtitle)) + "</p>" : "";
-      return '<header class="page-head"><h1>' + esc(t(p.title)) + "</h1>" + sub + "</header>";
+      var num = numeral(p.slug);
+      return '<header class="page-head">' +
+        (num ? '<span class="page-seal" aria-hidden="true">' + num + "</span>" : "") +
+        "<h1>" + esc(t(p.title)) + "</h1>" + sub + "</header>";
+    }
+
+    /* "Manga chs. 3–4 · Anime ep. 2" → { order: 3, label: "ch. 3–4" }.
+       Volume-only entries sort after every chapter. */
+    function chapterOf(item) {
+      var m = (item.meta && item.meta.en) || "";
+      var en = L.state.lang === "en";
+      var approx = /≈/.test(m);
+      var c = m.match(/chs?\.\s*(\d+)(?:\s*[–-]\s*(\d+)?)?/i);
+      if (c) {
+        var num = c[1] + (c[0].indexOf("–") !== -1 || c[0].indexOf("-") !== -1 ? "–" + (c[2] || "") : "");
+        return { order: +c[1], num: num, unit: en ? "ch." : "話", approx: approx };
+      }
+      var v = m.match(/vol\.\s*(\d+)/i);
+      if (v) return { order: 1000 + +v[1], num: v[1], unit: en ? "vol." : "卷", approx: approx };
+      return { order: 9999, num: "", unit: "", approx: approx };
+    }
+    function chapterHtml(ch) {
+      if (!ch.num) return "";
+      var en = L.state.lang === "en";
+      var pre = ch.approx ? (en ? "≈ " : "約 ") : "";
+      /* Bodoni's en dash is a hairline at display size; give it a sturdier face */
+      var num = esc(ch.num).replace(/–/g, '<span class="ch__dash">–</span>');
+      return en
+        ? '<span class="ch__unit">' + pre + ch.unit + '</span><span class="ch__num">' + num + "</span>"
+        : '<span class="ch__unit">' + pre + "第</span>" + '<span class="ch__num">' + num + '</span><span class="ch__unit">' + ch.unit + "</span>";
+    }
+    function byChapter(items) {
+      return items.map(function (it, i) { return { it: it, ch: chapterOf(it), i: i }; })
+        .sort(function (a, b) { return (a.ch.order - b.ch.order) || (a.i - b.i); });
+    }
+    /* the other language's title, shown as a second voice (石兵八陣 on the
+       English page, "Stone Sentinel Maze" on the Chinese one) */
+    function altTitle(item) {
+      var en = L.state.lang === "en";
+      var other = en ? item.title.zh : item.title.en;
+      if (!other || other === t(item.title)) return "";
+      return '<span class="alt-title" lang="' + (en ? "zh-Hant" : "en") + '">' + esc(other) + "</span>";
+    }
+    function fill(tpl, vals, wrap) {
+      return esc(tpl).replace(/\{(\d)\}/g, function (_m, k) {
+        var v = vals[+k] == null ? "" : String(vals[+k]);
+        return wrap ? '<b class="tally">' + esc(v) + "</b>" : esc(v);
+      });
     }
 
     function barChart(series, accent) {
@@ -90,28 +147,67 @@
        ===================================================================== */
     var RENDERERS = {
 
-      /* ---- hub: hero stats + a card linking to every other page ---- */
+      /* ---- hub: 計 hero + iron-law band + stratagem lineup + war-council contents ---- */
       hub: function (p) {
-        var stats = (p.stats || []).map(function (s) {
-          return '<div class="hero__stat" data-item>' +
-            '<b class="hero__stat-value" data-count="' + esc(String(s.value)) + '">0</b>' +
-            '<span class="hero__stat-label">' + esc(t(s.label)) + "</span></div>";
-        }).join("");
-        var cards = L.pages.filter(function (q) { return q.slug !== "home"; }).map(function (q) {
-          return '<a class="card card--nav" data-item href="' + esc(L.pageHref(q)) + '" ' +
-              'aria-label="' + esc(t(q.title)) + '">' +
-            '<span class="material-symbols-rounded card__icon" aria-hidden="true">' + esc(q.icon || "label") + "</span>" +
-            '<h3 class="card__title">' + esc(t(q.title)) + "</h3>" +
-            '<p class="card__summary">' + esc(t(q.subtitle)) + "</p></a>";
-        }).join("");
+        var en = L.state.lang === "en";
+        var h = p.hero || {};
+        var vals = (p.stats || []).map(function (st) { return st.value; });
+        var hero =
+          '<section class="hero" aria-labelledby="heroTitle">' +
+            '<div class="hero__mark" aria-hidden="true">' +
+              '<span class="hero__glyph" data-glyph="' + esc(h.glyph || "計") + '">' + esc(h.glyph || "計") + "</span>" +
+              (h.vertical ? '<span class="hero__vert" lang="zh-Hant">' + esc(h.vertical) + "</span>" : "") +
+            "</div>" +
+            '<div class="hero__copy">' +
+              '<h1 class="hero__title" id="heroTitle">' + esc(t(h.headline) || t(p.title)) + "</h1>" +
+              '<p class="hero__lede">' + esc(t(p.subtitle)) + "</p>" +
+              (h.statLine ? '<p class="hero__tally">' + fill(t(h.statLine), vals, true) + "</p>" : "") +
+              '<div class="hero__actions">' +
+                (h.cta ? '<a class="btn btn--seal" href="' + esc(h.cta.href) + '">' + fill(t(h.cta.label), vals) + "</a>" : "") +
+                (h.cta2 ? '<a class="quiet-link" href="' + esc(h.cta2.href) + '">' + fill(t(h.cta2.label), vals) + "</a>" : "") +
+              "</div>" +
+            "</div>" +
+          "</section>";
+
         var quote = p.quote
-          ? '<blockquote class="hero__quote" data-item><p>' + esc(t(p.quote.text)) + "</p>" +
-            (t(p.quote.by) ? '<cite>' + esc(t(p.quote.by)) + "</cite>" : "") + "</blockquote>"
+          ? '<section class="ironlaw"><blockquote class="ironlaw__quote"><p>' + esc(t(p.quote.text)) + "</p>" +
+            (t(p.quote.by) ? "<cite>" + esc(t(p.quote.by)) + "</cite>" : "") + "</blockquote></section>"
           : "";
-        return head(p) +
-          (stats ? '<div class="hero__stats">' + stats + "</div>" : "") +
-          quote +
-          '<div class="grid">' + cards + "</div>";
+
+        var strat = L.pages.filter(function (q) { return q.slug === "stratagems"; })[0];
+        var lineup = "";
+        if (strat && p.lineup) {
+          var stops = byChapter(strat.items || []).map(function (row) {
+            var it = row.it;
+            return '<li class="lineup__stop">' +
+              '<a class="lineup__link" href="' + esc(L.pageHref(strat)) + "#" + esc(it.slug) + '">' +
+                '<span class="lineup__ch ch">' + chapterHtml(row.ch) + "</span>" +
+                '<span class="lineup__name">' + esc(t(it.title)) + "</span>" +
+                altTitle(it) +
+              "</a></li>";
+          }).join("");
+          lineup = '<section class="lineup" aria-labelledby="lineupTitle">' +
+            '<header class="sec-head"><h2 id="lineupTitle">' + esc(t(p.lineup.title)) + "</h2>" +
+              (t(p.lineup.note) ? "<p>" + esc(t(p.lineup.note)) + "</p>" : "") + "</header>" +
+            '<div class="lineup__scroll" tabindex="0" aria-label="' + esc(t(p.lineup.title)) + '">' +
+              '<ol class="lineup__rail">' + stops + "</ol></div></section>";
+        }
+
+        var council = rooms().map(function (q, i) {
+          return '<li class="council__item">' +
+            '<a class="council__link" href="' + esc(L.pageHref(q)) + '">' +
+              '<span class="council__num" aria-hidden="true">' + (NUMERALS[i] || "") + "</span>" +
+              '<span class="council__body">' +
+                '<span class="council__title">' + esc(t(q.title)) + "</span>" +
+                '<span class="council__sum">' + esc(t(q.subtitle)) + "</span>" +
+              "</span></a></li>";
+        }).join("");
+        var councilTitle = p.council ? t(p.council.title) : (en ? "Contents" : "目錄");
+
+        return hero + quote + lineup +
+          '<section class="council" aria-labelledby="councilTitle">' +
+            '<header class="sec-head"><h2 id="councilTitle">' + esc(councilTitle) + "</h2></header>" +
+            '<ol class="council__list">' + council + "</ol></section>";
       },
 
       /* ---- gallery: search + chips + card grid + dialog ---- */
@@ -129,7 +225,7 @@
             (cats ? '<div class="chips"><button class="chip chip--active" type="button" data-cat="">' + esc(allLabel) + "</button>" + cats + "</div>" : "") +
           "</div>" +
           '<p class="result-count" id="resultCount" aria-live="polite"></p>' +
-          '<div class="grid" id="grid"></div>';
+          '<div class="' + (p.view === "codex" ? "codex" : "grid") + '" id="grid"></div>';
       },
 
       /* ---- article: sticky TOC + prose + reading progress ---- */
@@ -217,13 +313,24 @@
         var lead = (p.lead || []).map(function (b) {
           return '<p class="page-lead">' + esc(t(b)) + "</p>";
         }).join("");
-        var tiles = (p.tiles || []).map(function (s) {
-          return '<div class="stat-card stat-card--' + esc(s.tone || "plain") + '" data-item>' +
-            '<b class="stat-value">' + esc(String(s.value)) + "</b>" +
-            '<span class="stat-label">' + esc(t(s.label)) + "</span></div>";
-        }).join("");
-        return head(p) + lead +
-          (tiles ? '<div class="stat-grid stat-grid--tight">' + tiles + "</div>" : "") +
+        /* the verdict split as one proportional bar, not four equal boxes:
+           the point is that 113 of 146 is most of the bar */
+        var total = (p.tiles || []).filter(function (s) { return (s.tone || "plain") === "plain"; })[0];
+        var parts = (p.tiles || []).filter(function (s) { return s !== total; });
+        var tiles = "";
+        if (parts.length) {
+          var aria = parts.map(function (s) { return s.value + " " + t(s.label); }).join(", ");
+          tiles = '<figure class="verdicts" data-item>' +
+            (total ? '<figcaption class="verdicts__total"><b>' + esc(String(total.value)) + "</b> " + esc(t(total.label)) + "</figcaption>" : "") +
+            '<div class="verdicts__bar" role="img" aria-label="' + esc(aria) + '">' +
+              parts.map(function (s) {
+                return '<span class="verdicts__seg verdicts__seg--' + esc(s.tone || "plain") + '" style="flex-grow:' + Number(s.value) + '"></span>';
+              }).join("") + "</div>" +
+            '<ul class="verdicts__legend">' + parts.map(function (s) {
+              return '<li class="verdicts__key verdicts__key--' + esc(s.tone || "plain") + '"><b>' + esc(String(s.value)) + "</b> " + esc(t(s.label)) + "</li>";
+            }).join("") + "</ul></figure>";
+        }
+        return head(p) + lead + tiles +
           '<div class="toolbar">' +
             '<input id="search" class="search" type="search" autocomplete="off" ' +
               'placeholder="' + (L.state.lang === "en" ? "Search…" : "搜尋…") + '" ' +
@@ -357,7 +464,7 @@
        WIRING (interactions) — keyed by layout, run after innerHTML is set
        ===================================================================== */
     var WIRE = {
-      hub: function () { animateCounters(); },
+      hub: function () { /* static; the lineup scrolls natively */ },
 
       gallery: function (p) {
         var grid = document.getElementById("grid");
@@ -374,6 +481,23 @@
         }
         function paint() {
           var rows = (p.items || []).filter(matches);
+          if (p.view === "codex") {
+            grid.innerHTML = byChapter(rows).map(function (row) {
+              var item = row.it;
+              var tags = (item.tags || []).map(function (g) { return '<span class="tag">' + esc(g) + "</span>"; }).join("");
+              return '<article class="codex-row" tabindex="0" role="button" data-item data-slug="' + esc(item.slug) + '" ' +
+                'aria-label="' + esc(t(item.title)) + '">' +
+                '<div class="codex-row__when"><span class="ch">' + chapterHtml(row.ch) + "</span>" +
+                  (t(item.meta) ? '<span class="codex-row__meta">' + esc(t(item.meta)) + "</span>" : "") + "</div>" +
+                '<div class="codex-row__main">' + altTitle(item) +
+                  '<h3 class="codex-row__title">' + esc(t(item.title)) + "</h3>" +
+                  '<p class="codex-row__summary">' + esc(t(item.summary)) + "</p></div>" +
+                (tags ? '<div class="card__tags codex-row__tags">' + tags + "</div>" : "") + "</article>";
+            }).join("");
+            if (count) count.textContent = rows.length + (L.state.lang === "en" ? " result(s)" : " 筆結果");
+            wireCards();
+            return;
+          }
           grid.innerHTML = rows.map(function (item) {
             var tags = (item.tags || []).map(function (g) { return '<span class="tag">' + esc(g) + "</span>"; }).join("");
             return '<article class="card" tabindex="0" role="button" data-item data-slug="' + esc(item.slug) + '" ' +
@@ -387,7 +511,7 @@
           wireCards();
         }
         function wireCards() {
-          [].forEach.call(grid.querySelectorAll(".card[data-slug]"), function (card) {
+          [].forEach.call(grid.querySelectorAll("[data-slug]"), function (card) {
             var slug = card.dataset.slug;
             card.addEventListener("click", function () { openItem(slug); });
             card.addEventListener("keydown", function (e) {
@@ -829,28 +953,6 @@
         quiz();
       }
     };
-
-    /* ---- hero count-up (shared by hub) ---- */
-    function animateCounters() {
-      var els = [].slice.call(pageEl.querySelectorAll(".hero__stat-value[data-count]"));
-      if (!els.length) return;
-      function run(el) {
-        var target = parseFloat(el.dataset.count) || 0, dur = 1000, start = null;
-        function step(ts) {
-          if (start === null) start = ts;
-          var pr = Math.min(1, (ts - start) / dur), eased = 1 - Math.pow(1 - pr, 3);
-          el.textContent = String(Math.round(target * eased));
-          if (pr < 1) requestAnimationFrame(step); else el.textContent = String(target);
-        }
-        requestAnimationFrame(step);
-      }
-      if (!("IntersectionObserver" in window)) { els.forEach(run); return; }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { if (en.isIntersecting) { run(en.target); io.unobserve(en.target); } });
-      }, { threshold: 0.4 });
-      els.forEach(function (el) { io.observe(el); });
-      teardowns.push(function () { io.disconnect(); });
-    }
 
     /* =====================================================================
        RENDER the current page; re-runnable on language switch
