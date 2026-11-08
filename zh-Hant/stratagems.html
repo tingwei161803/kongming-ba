@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant" data-theme="light">
+<html lang="zh-Hant">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-29FMNJBSWV"></script>
@@ -10,10 +10,19 @@
     gtag('config', 'G-29FMNJBSWV');
   </script>
   <meta charset="UTF-8" />
+  <script>
+    /* paint the right theme before first render: saved choice, else the OS setting */
+    try {
+      var savedTheme = localStorage.getItem("theme");
+      document.documentElement.setAttribute("data-theme",
+        savedTheme === "dark" || savedTheme === "light" ? savedTheme
+          : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+    } catch (e) { /* storage blocked: the stylesheet follows the OS on its own */ }
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>計謀對照 · 派對咖孔明知識庫</title>
   <meta name="description" content="孔明的每一計：出現位置（漫畫話數・動畫集數）、真正的出處（史實 vs 演義），以及它偷偷對應的商管理論。點卡片看詳情。" />
-  <meta name="theme-color" content="#b3391e" />
+  <meta name="theme-color" content="#c23b22" />
   <link rel="canonical" href="https://kongming-ba.peteraim.com/zh-Hant/stratagems.html" />
   <link rel="alternate" hreflang="en" href="https://kongming-ba.peteraim.com/stratagems.html" />
   <link rel="alternate" hreflang="zh-Hant" href="https://kongming-ba.peteraim.com/zh-Hant/stratagems.html" />
@@ -29,7 +38,7 @@
   <meta name="twitter:image" content="https://kongming-ba.peteraim.com/assets/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&family=Instrument+Sans:wght@400..600&family=LXGW+WenKai+TC&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -41,6 +50,6 @@
   <script src="../data/data.js"></script>
   <script src="../assets/shell.js"></script>
   <script src="../assets/app.js"></script>
-<p class="lang-alt-link" style="text-align:center;padding:12px;"><a href="/stratagems.html" hreflang="en" rel="alternate" lang="en">English version</a></p>
+<p class="lang-alt-link"><a href="/stratagems.html" hreflang="en" rel="alternate" lang="en">English version</a></p>
 </body>
 </html>

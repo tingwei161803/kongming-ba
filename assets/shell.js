@@ -54,9 +54,15 @@
   }
 
   /* ---------- global state ---------- */
+  /* theme: an explicit choice wins; otherwise follow the operating system */
+  function systemTheme() {
+    try { return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; }
+    catch (e) { return "light"; }
+  }
+  var savedTheme = lsGet("theme");
   var state = {
     lang:  declaredLang(),
-    theme: lsGet("theme") || "light"
+    theme: savedTheme === "dark" || savedTheme === "light" ? savedTheme : systemTheme()
   };
 
   /* ---------- helpers shared with app.js ---------- */
@@ -104,7 +110,7 @@
       ? '<a class="gh-star" id="ghStar" href="https://github.com/' + repo + '" target="_blank" rel="noopener" data-repo="' + repo + '">' +
           '<span class="material-symbols-rounded">star</span>' +
           '<span class="gh-star__label">Star</span>' +
-          '<span class="gh-star__count" id="ghStarCount">—</span>' +
+          '<span class="gh-star__count" id="ghStarCount" hidden></span>' +
         '</a>'
       : '';
     /* language switch: a real link to this page's other-language address, so a
@@ -113,7 +119,7 @@
     appbar.innerHTML =
       '<div class="appbar__inner">' +
         '<a class="brand" href="index.html">' +
-          '<span class="brand__seal" aria-hidden="true">孔</span>' +
+          '<span class="brand__seal" aria-hidden="true">孔明</span>' +
           '<span class="brand__name" id="brandName"></span>' +
         '</a>' +
         '<div class="appbar__actions">' +
@@ -148,6 +154,12 @@
       '</div>';
     main.parentNode.insertBefore(footer, main.nextSibling);
 
+    /* every page ships a plain-HTML link to its other-language twin after the
+       scripts (so crawlers and no-JS readers get it). With JS it moves into the
+       footer instead of floating below it. */
+    var alt = document.querySelector(".lang-alt-link");
+    if (alt) footer.appendChild(alt);
+
     /* shared detail dialog (used by card layouts) */
     var dialog = document.createElement("dialog");
     dialog.className = "dialog";
@@ -180,17 +192,25 @@
       a.className = "navpill" + (p.slug === here ? " navpill--active" : "");
       a.href = pageHref(p);
       if (p.slug === here) a.setAttribute("aria-current", "page");
-      a.innerHTML =
-        '<span class="material-symbols-rounded" aria-hidden="true">' +
-          escapeHtml(p.icon || "label") + "</span>" +
-        "<span>" + escapeHtml(t(p.title)) + "</span>";
+      a.innerHTML = "<span>" + escapeHtml(t(p.title)) + "</span>";
       inner.appendChild(a);
     });
-    /* keep the active pill in view within the scrolling nav */
+    /* keep the active tab in view within the scrolling nav, without moving the page */
     var active = inner.querySelector(".navpill--active");
-    if (active && active.scrollIntoView) {
-      active.scrollIntoView({ block: "nearest", inline: "center" });
+    if (active) {
+      inner.scrollLeft = active.offsetLeft - (inner.clientWidth - active.offsetWidth) / 2;
     }
+    markNavEdges();
+  }
+
+  /* fade whichever edge still hides tabs, so a clipped row reads as scrollable */
+  function markNavEdges() {
+    var inner = document.getElementById("pageNavInner");
+    var nav = document.getElementById("pageNav");
+    if (!inner || !nav) return;
+    var max = inner.scrollWidth - inner.clientWidth;
+    nav.classList.toggle("pagenav--more-left", inner.scrollLeft > 4);
+    nav.classList.toggle("pagenav--more-right", inner.scrollLeft < max - 4);
   }
 
   /* ---------- chrome text in the active language ---------- */
@@ -223,13 +243,25 @@
     document.documentElement.setAttribute("data-theme", state.theme);
     var icon = document.getElementById("themeIcon");
     if (icon) icon.textContent = state.theme === "dark" ? "light_mode" : "dark_mode";
-    lsSet("theme", state.theme);
   }
   function wire() {
     document.getElementById("themeToggle").addEventListener("click", function () {
       state.theme = state.theme === "dark" ? "light" : "dark";
+      lsSet("theme", state.theme);          // only an explicit click is remembered
       applyTheme();
     });
+    /* no saved choice yet: keep tracking the OS setting live */
+    try {
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (e) {
+        var saved = lsGet("theme");
+        if (saved === "dark" || saved === "light") return;
+        state.theme = e.matches ? "dark" : "light";
+        applyTheme();
+      });
+    } catch (e) { /* old browsers: no live tracking */ }
+    var inner = document.getElementById("pageNavInner");
+    if (inner) inner.addEventListener("scroll", markNavEdges, { passive: true });
+    window.addEventListener("resize", markNavEdges);
   }
 
   /* =======================================================================
@@ -250,22 +282,35 @@
      INIT
      ===================================================================== */
   /* ---------- GitHub star count (public API, no auth) ---------- */
+  /* The count stays hidden unless a real, non-zero number arrives. The answer
+     is cached per tab session — anonymous API calls are capped at 60/hour, and
+     every page view used to spend one (and show "Star —" or "0" once refused). */
   function loadStars() {
     var el = document.getElementById("ghStar");
     if (!el) return;
     var r = el.dataset.repo;
     if (!r || r.indexOf("{{") === 0) return;             // unfilled → skip
-    fetch("https://api.github.com/repos/" + r)
+    var key = "gh-stars:" + r;
+    function show(n) {
+      var c = document.getElementById("ghStarCount");
+      if (!c || typeof n !== "number" || !(n > 0)) return;
+      c.textContent = n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, "") + "k" : String(n);
+      c.hidden = false;
+    }
+    var cached = null;
+    try { cached = sessionStorage.getItem(key); } catch (e) { /* storage blocked */ }
+    if (cached !== null) { show(Number(cached)); return; }
+    if (typeof fetch !== "function") return;
+    fetch("https://api.github.com/repos/" + r, { headers: { Accept: "application/vnd.github+json" } })
       .then(function (res) { return res.ok ? res.json() : null; })
       .then(function (j) {
-        var c = document.getElementById("ghStarCount");
-        if (c && j && typeof j.stargazers_count === "number") {
-          c.textContent = j.stargazers_count >= 1000
-            ? (j.stargazers_count / 1000).toFixed(1).replace(/\.0$/, "") + "k"
-            : String(j.stargazers_count);
-        }
+        var n = j && typeof j.stargazers_count === "number" ? j.stargazers_count : 0;
+        try { sessionStorage.setItem(key, String(n)); } catch (e) { /* ignore */ }
+        show(n);
       })
-      .catch(function () { /* offline / rate-limited */ });
+      .catch(function () {
+        try { sessionStorage.setItem(key, "0"); } catch (e) { /* ignore */ }
+      });
   }
 
   function init() {
